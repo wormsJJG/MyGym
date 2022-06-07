@@ -15,6 +15,7 @@
 		356A3CF7284F7F1C002E7AD4 /* MyGymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CF6284F7F1C002E7AD4 /* MyGymTests.swift */; };
 		356A3D01284F7F1C002E7AD4 /* MyGymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3D00284F7F1C002E7AD4 /* MyGymUITests.swift */; };
 		356A3D03284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3D02284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift */; };
+		356A3D14284F80F1002E7AD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3D13284F80F1002E7AD4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		356A3CFC284F7F1C002E7AD4 /* MyGymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		356A3D00284F7F1C002E7AD4 /* MyGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITests.swift; sourceTree = "<group>"; };
 		356A3D02284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		356A3D13284F80F1002E7AD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		356A3D11284F7F34002E7AD4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				356A3D13284F80F1002E7AD4 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356A3D14284F80F1002E7AD4 /* LoginViewController.swift in Sources */,
 				356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */,
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 			);
