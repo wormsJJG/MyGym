@@ -6,7 +6,8 @@ target 'MyGym' do
   use_frameworks!
 
   # Pods for MyGym
-pod "AwesomeTextField"
+pod 'TweeTextField'
+
 
 
   target 'MyGymTests' do

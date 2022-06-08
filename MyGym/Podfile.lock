@@ -1,16 +1,16 @@
 PODS:
-  - AwesomeTextField (0.1.0)
+  - TweeTextField (1.6.4)
 
 DEPENDENCIES:
-  - AwesomeTextField
+  - TweeTextField
 
 SPEC REPOS:
   trunk:
-    - AwesomeTextField
+    - TweeTextField
 
 SPEC CHECKSUMS:
-  AwesomeTextField: 9539cb8dfc2741abf624f3e58ee6a151e1aaf670
+  TweeTextField: 726de695eead9784f7ed02e22f6944bfcfcca07a
 
-PODFILE CHECKSUM: f5c3f5787ff10946b051e3ee3f26adb7d088965b
+PODFILE CHECKSUM: b99759773388434ad6e876474c9685d537fcddd2
 
 COCOAPODS: 1.11.3
