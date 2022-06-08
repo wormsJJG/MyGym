@@ -1,0 +1,16 @@
+PODS:
+  - AwesomeTextField (0.1.0)
+
+DEPENDENCIES:
+  - AwesomeTextField
+
+SPEC REPOS:
+  trunk:
+    - AwesomeTextField
+
+SPEC CHECKSUMS:
+  AwesomeTextField: 9539cb8dfc2741abf624f3e58ee6a151e1aaf670
+
+PODFILE CHECKSUM: f5c3f5787ff10946b051e3ee3f26adb7d088965b
+
+COCOAPODS: 1.11.3
