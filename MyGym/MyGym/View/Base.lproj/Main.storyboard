@@ -168,7 +168,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="이름"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwX-Qu-Tkr" userLabel="NameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwX-Qu-Tkr" userLabel="IdTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="312" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -192,7 +192,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="아이디"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-xZ-6X2" userLabel="NameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-xZ-6X2" userLabel="EmailTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="370" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -216,7 +216,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="이메일"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-2N-wbk" userLabel="NameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-2N-wbk" userLabel="passWordTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="430" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -247,8 +247,11 @@
                                 <buttonConfiguration key="configuration" style="filled" title="회원가입">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButton:" destination="Cyd-D8-rTA" eventType="touchUpInside" id="am6-y5-JkZ"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-Fc-AdP" userLabel="NameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-Fc-AdP" userLabel="ReturnTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="492" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -278,7 +281,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="10z-4o-laT"/>
                     <connections>
-                        <outlet property="NameTextField" destination="hsQ-gA-dDA" id="cUu-mQ-8wv"/>
+                        <outlet property="confirmTextField" destination="Jsv-Fc-AdP" id="DU1-bh-ahP"/>
+                        <outlet property="emailTextField" destination="iPx-xZ-6X2" id="YYh-yC-iLz"/>
+                        <outlet property="idTextField" destination="NwX-Qu-Tkr" id="pBe-JQ-RkM"/>
+                        <outlet property="nameTextField" destination="hsQ-gA-dDA" id="nQc-6u-XmA"/>
+                        <outlet property="passwordTextField" destination="CGi-2N-wbk" id="s1z-YS-XrN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-WY-OHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
