@@ -48,6 +48,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="계정이 없으십니까? 회원가입"/>
                                 <connections>
                                     <action selector="registerButton:" destination="rdV-pr-Lr6" eventType="touchUpInside" id="5Qm-O5-NHC"/>
+                                    <segue destination="Cyd-D8-rTA" kind="push" id="rTU-Tb-qW3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,6 +81,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdD-qB-wij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-464" y="-245"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="tzb-BO-EE5">
+            <objects>
+                <viewController id="Cyd-D8-rTA" customClass="RegisterViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FeG-Ns-qyT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="O5j-sk-PVj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="10z-4o-laT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-WY-OHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="102"/>
         </scene>
     </scenes>
     <resources>
