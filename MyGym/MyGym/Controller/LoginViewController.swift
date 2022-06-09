@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController{
 
     @IBOutlet weak var LogoImages: UIImageView!
     @IBOutlet weak var idTextField: UITextField!
@@ -23,18 +23,20 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         if idTextField.text?.count ?? 0 < 7{
-            Erroralert("아이디를 정확히 입력해주세요", "")
-        } else if passWordTextField.text?.count ?? 0 < 8{
-            Erroralert("비밀번호를 정확히 입력해주세요.", "")
-        }else{
+            ErrorAlert("아이디를 정확히 입력해주세요", "")
+            return
+        }
+        if passWordTextField.text?.count ?? 0 < 8{
+            ErrorAlert("비밀번호를 정확히 입력해주세요.", "")
+            return
+        }
             Auth.auth().signIn(withEmail: idTextField.text!, password: passWordTextField.text!) { (user, err) in
                 if user != nil {
                     print("로그인 성공")
                 }else{
-                    self.Erroralert("로그인 실패", "아아디 또는 비밀번호가 일치하지않습니다.")
+                    self.ErrorAlert("로그인 실패", "아아디 또는 비밀번호가 일치하지않습니다.")
                 }
             }
-        }
     }
     @IBAction func registerButton(_ sender: Any) {
     }
@@ -45,7 +47,7 @@ class LoginViewController: UIViewController {
         idTextField.delegate = self
         passWordTextField.delegate = self
     }
-    func Erroralert(_ title: String, _ message: String){
+    func ErrorAlert(_ title: String, _ message: String){
         let ErrorAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "확인", style: .default){ (action) in }
         ErrorAlert.addAction(okAction)
