@@ -66,7 +66,7 @@
                                 <rect key="frame" x="70" y="488" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
                                         <color key="value" systemColor="labelColor"/>
@@ -113,6 +113,7 @@
                     <connections>
                         <outlet property="LogoImages" destination="UJ4-SE-dba" id="LzL-KZ-l6V"/>
                         <outlet property="idTextField" destination="eLD-6f-Tw2" id="hK5-ee-QhD"/>
+                        <outlet property="loginButton" destination="vNp-b3-8Fi" id="BMv-lS-GTZ"/>
                         <outlet property="passWordTextField" destination="r5U-Bq-DxC" id="Jh6-hB-wnG"/>
                     </connections>
                 </viewController>
@@ -196,7 +197,7 @@
                                 <rect key="frame" x="69" y="392" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                         <color key="value" systemColor="systemMintColor"/>
@@ -231,7 +232,7 @@
                                 <rect key="frame" x="69" y="450" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                         <color key="value" systemColor="systemMintColor"/>
