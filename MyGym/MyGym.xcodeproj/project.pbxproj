@@ -58,7 +58,7 @@
 		356A3D00284F7F1C002E7AD4 /* MyGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITests.swift; sourceTree = "<group>"; };
 		356A3D02284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		356A3D13284F80F1002E7AD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		359AA4B72850DD53009BDA76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		359AA4B72850DD53009BDA76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		51FD8312E44EC7BA3F244955 /* Pods-MyGymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGymTests.debug.xcconfig"; path = "Target Support Files/Pods-MyGymTests/Pods-MyGymTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E25E7C1E4C89B5DE70E9F47 /* Pods_MyGym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE94DF51A6E1600105F52729 /* Pods_MyGym_MyGymUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGym_MyGymUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
