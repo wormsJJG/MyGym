@@ -141,7 +141,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="VOY-Gz-Shp">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="VOY-Gz-Shp" customClass="GymListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3XA-a0-QPk">
@@ -178,6 +178,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="MOQ-pO-E5t" secondAttribute="trailing" constant="8" id="prA-SL-iO4"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="QEt-zN-myq" id="xkY-pd-A7D"/>
+                                            <outlet property="gymNameLabel" destination="MOQ-pO-E5t" id="uKB-9U-cJP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

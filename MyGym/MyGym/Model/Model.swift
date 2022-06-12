@@ -18,14 +18,14 @@ class Users {
     var attendingHealthClub: HealthClub = HealthClub()
     var ptDate: [PtDate] = []
 }
-class HealthClub{
-    var uid: String = "" //primary key
-    var clubName: String = ""
-    var clubLocation: String = ""
-    var clubPhoneNumber: String = ""
-    //clubImages
-    var trainerList: [Trainer] = []
-}
+//class HealthClub{
+//    var uid: String = "" //primary key
+//    var clubName: String = ""
+//    var clubLocation: String = ""
+//    var clubPhoneNumber: String = ""
+//    //clubImages
+//    var trainerList: [Trainer] = []
+//}
 class Trainer {
     var uid: String = "" // primary key
     var name: String = ""
@@ -35,3 +35,4 @@ class Trainer {
 class PtDate{
     var date: Date = Date()
 }
+
