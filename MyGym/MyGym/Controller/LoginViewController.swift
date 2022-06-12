@@ -7,9 +7,10 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController{
-
+    var ref: DatabaseReference = DatabaseReference()
     @IBOutlet weak var LogoImages: UIImageView!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -44,6 +45,7 @@ class LoginViewController: UIViewController{
 //        if let user = Auth.auth().currentUser {
 //            print("이미 로그인 된 상태입니다.")
 //        }
+        
         idTextField.delegate = self
         passWordTextField.delegate = self
     }

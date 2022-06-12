@@ -259,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0h0-0R-pOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-560"/>
+            <point key="canvasLocation" x="2033" y="-560"/>
         </scene>
         <!--Gym Select Info View Controller-->
         <scene sceneID="zkB-j0-IBd">
