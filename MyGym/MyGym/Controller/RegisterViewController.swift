@@ -19,10 +19,10 @@ class RegisterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
-//        Auth.auth().createUser(withEmail: "health@gmail.com", password: "12345678"){ (HealthClub, err) in
+//        Auth.auth().createUser(withEmail: "health2@gmail.com", password: "12345678"){ (HealthClub, err) in
 //            if HealthClub != nil{
 //                print("헬스장 등록 완료")
-//                self.ref.child("users").child((HealthClub?.user.uid)!).setValue(["name": "찬스짐", "phoneNumber": "010-1111-2222", "location": "경기도 성남시 중원구 성남동", "type": "HealthClub"])
+//                self.ref.child("users").child((HealthClub?.user.uid)!).setValue(["name": "에이탑짐", "phoneNumber": "010-1111-2222", "location": "경기도 성남시 중원구 성남동", "type": "HealthClub"])
 //            }else{
 //                print("헬스장 등록 실패")
 //            }
