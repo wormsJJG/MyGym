@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  RegisterUserViewController.swift
 //  MyGym
 //
 //  Created by Schro on 2022/06/08.
@@ -8,9 +8,11 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class RegisterViewController: UIViewController{
+class RegisterUserViewController: UIViewController{
     var ref: DatabaseReference!
-    @IBOutlet weak var nameTextField: UITextField!
+    
+    
+        @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmTextField: UITextField!
@@ -19,12 +21,7 @@ class RegisterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
-//        Auth.auth().createUser(withEmail: "health2@gmail.com", password: "12345678"){ (HealthClub, err) in
-//            if HealthClub != nil{
-//                print("헬스장 등록 완료")
-//                self.ref.child("users").child((HealthClub?.user.uid)!).setValue(["name": "에이탑짐", "phoneNumber": "010-1111-2222", "location": "경기도 성남시 중원구 성남동", "type": "HealthClub"])
-//            }else{
-//                print("헬스장 등록 실패")
+
 //            }
 //        }
     }
@@ -58,10 +55,7 @@ class RegisterViewController: UIViewController{
     }
     func setView(){
         ref = Database.database().reference()
-        nameTextField.delegate = self
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        confirmTextField.delegate = self
+        setDelegate()
     }
     func ErrorAlert(_ title: String, _ message: String){
         let ErrorAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -69,8 +63,14 @@ class RegisterViewController: UIViewController{
         ErrorAlert.addAction(okAction)
         present(ErrorAlert, animated: true)
     }
+    func setDelegate(){
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmTextField.delegate = self
+    }
 }
-extension RegisterViewController: UITextFieldDelegate{
+extension RegisterUserViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField{
         case nameTextField:
