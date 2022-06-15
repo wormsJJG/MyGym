@@ -123,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="353.62318840579712" y="-560.49107142857144"/>
         </scene>
-        <!--헬스장 목록-->
+        <!--님 환영합니다.-->
         <scene sceneID="IhX-Lw-kN8">
             <objects>
                 <viewController id="i4l-h4-4QC" customClass="GymListViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
@@ -199,7 +199,7 @@
                             <constraint firstItem="3gS-pc-m7r" firstAttribute="centerX" secondItem="g1n-rq-oMz" secondAttribute="centerX" id="fMs-84-8au"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="헬스장 목록" id="VNx-Z0-8Qb"/>
+                    <navigationItem key="navigationItem" title="님 환영합니다." id="VNx-Z0-8Qb"/>
                     <connections>
                         <outlet property="collectionView" destination="3gS-pc-m7r" id="Czt-4w-ZQT"/>
                     </connections>
