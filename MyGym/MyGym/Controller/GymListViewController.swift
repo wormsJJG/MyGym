@@ -35,7 +35,6 @@ class GymListViewController: UIViewController {
                     self.gymList.append(gym)
                     self.collectionView.reloadData()
                 }
-                
             }
         })
     }
