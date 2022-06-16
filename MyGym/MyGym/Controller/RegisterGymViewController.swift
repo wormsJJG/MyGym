@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 class RegisterGymViewController: UIViewController {
     var ref: DatabaseReference!
+    let fireFun = FirebaseFunction()
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordCheckTextField: UITextField!
@@ -22,14 +23,7 @@ class RegisterGymViewController: UIViewController {
         setView()
     }
     @IBAction func addButton(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (HealthClub, err) in
-                    if HealthClub != nil{
-                        self.ref.child((HealthClub?.user.uid)!).setValue(["name": self.gymNameTextField.text!, "phoneNumber": self.phoneNumberTextField.text!, "location": self.locationTextField.text!, "type": "HealthClub"])
-                        print("헬스장 등록 완료")
-                    }else{
-                        print("헬스장 등록 실패")
-                    }
-                }
+        fireFun.registerGym(emailTextField.text!, passwordTextField.text!, gymNameTextField.text!, phoneNumberTextField.text!, locationTextField.text!, self)
     }
     func setView(){
         ref = Database.database().reference().child("users")
