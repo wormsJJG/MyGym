@@ -29,6 +29,7 @@ class FirebaseFunction{
         Auth.auth().signIn(withEmail: email, password: password) { (user, err) in
             if user != nil {
                 let homeVC = self.storyboard.instantiateViewController(withIdentifier: "HomeVC") as! GymListViewController
+                homeVC.userUid = user?.user.uid ?? "ERROR"
                 viewController.navigationController?.pushViewController(homeVC, animated: true)
             }else{
                 self.simpleAlert.ErrorAlert("로그인 실패", "아아디 또는 비밀번호가 일치하지않습니다.", viewController)
@@ -93,6 +94,12 @@ class FirebaseFunction{
 //        })
 //    }
     //회원이 헬스장을 추가하는 함수
-    
+    func setViewTitle(_ uid: String,_ viewController: UIViewController){
+        ref.child(uid).observe(.value, with: {snapShot in
+            let value = snapShot.value as? NSDictionary
+            let userName = value?["name"] as? String ?? ""
+            viewController.navigationItem.title = "\(userName)님 페이지"
+        })
+    }
 }
 
