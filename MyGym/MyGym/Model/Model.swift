@@ -6,26 +6,25 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseDatabase
 
-class Auth {
-    var id: String = ""
-    var password: String = ""
-    var uid: String = "" //foreign key
-}
-class Users {
+class Users{
     var uid: String = "" // primary key
     var name: String = ""
     var attendingHealthClub: HealthClub = HealthClub()
     var ptDate: [PtDate] = []
 }
-//class HealthClub{
-//    var uid: String = "" //primary key
-//    var clubName: String = ""
-//    var clubLocation: String = ""
-//    var clubPhoneNumber: String = ""
-//    //clubImages
-//    var trainerList: [Trainer] = []
-//}
+
+class HealthClub{
+    var uid: String = "" //primary key
+    var name: String = ""
+    var location: String = ""
+    var phoneNumber: String = ""
+    var type: String = ""
+    var userList: [Users] = []
+    var trainerList: [Trainer] = []
+}
 class Trainer {
     var uid: String = "" // primary key
     var name: String = ""

@@ -61,7 +61,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
                                 <connections>
                                     <action selector="loginButton:" destination="rdV-pr-Lr6" eventType="touchUpInside" id="dlQ-Ef-Vdt"/>
-                                    <segue destination="i4l-h4-4QC" kind="push" id="6xc-kp-96Q"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5U-Bq-DxC" customClass="TweeActiveTextField" customModule="TweeTextField">
@@ -126,7 +125,7 @@
         <!--님 환영합니다.-->
         <scene sceneID="IhX-Lw-kN8">
             <objects>
-                <viewController id="i4l-h4-4QC" customClass="GymListViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="i4l-h4-4QC" customClass="GymListViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1n-rq-oMz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0h0-0R-pOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061" y="-560"/>
+            <point key="canvasLocation" x="2971.0144927536235" y="-560.49107142857144"/>
         </scene>
         <!--헬스장 등록-->
         <scene sceneID="Qin-pX-klA">
@@ -602,7 +601,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registerButton:" destination="Cyd-D8-rTA" eventType="touchUpInside" id="UWW-we-sB2"/>
+                                    <action selector="registerButton:" destination="Cyd-D8-rTA" eventType="touchUpInside" id="DCG-nt-H3i"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-Fc-AdP" userLabel="ReturnTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
@@ -666,6 +665,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-WY-OHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="354" y="151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NA5-LH-6yQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJO-W2-uiU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6f2-9d-Nlb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i4l-h4-4QC" kind="relationship" relationship="rootViewController" id="dVA-D6-jB7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYd-u0-uak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="-1353"/>
         </scene>
     </scenes>
     <resources>

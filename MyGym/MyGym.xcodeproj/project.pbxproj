@@ -66,7 +66,6 @@
 		356A3D00284F7F1C002E7AD4 /* MyGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITests.swift; sourceTree = "<group>"; };
 		356A3D02284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		356A3D13284F80F1002E7AD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		35A6891C28549A2E002186C0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = MyGym/Model/Model.swift; sourceTree = SOURCE_ROOT; };
 		51FD8312E44EC7BA3F244955 /* Pods-MyGymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGymTests.debug.xcconfig"; path = "Target Support Files/Pods-MyGymTests/Pods-MyGymTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E25E7C1E4C89B5DE70E9F47 /* Pods_MyGym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE94DF51A6E1600105F52729 /* Pods_MyGym_MyGymUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGym_MyGymUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +127,7 @@
 		356A3CDE284F7F1B002E7AD4 /* MyGym */ = {
 			isa = PBXGroup;
 			children = (
+				35760BB2285A0FA2006CDAFD /* Help */,
 				35A6891E2854AE29002186C0 /* Model */,
 				356A3D10284F7F2E002E7AD4 /* View */,
 				356A3D11284F7F34002E7AD4 /* Controller */,
@@ -185,6 +185,15 @@
 				356A3CE1284F7F1B002E7AD4 /* SceneDelegate.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		35760BB2285A0FA2006CDAFD /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				35760BAE285A0B82006CDAFD /* FirebaseFuntion.swift */,
+				35760BB3285A1123006CDAFD /* SimpleAlert.swift */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		35A6891E2854AE29002186C0 /* Model */ = {
@@ -461,7 +470,9 @@
 				26410CF72855B37900797104 /* GymSelectViewController.swift in Sources */,
 				26749A632852360300FAD08E /* GymListViewController.swift in Sources */,
 				268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */,
+				35760BB4285A1123006CDAFD /* SimpleAlert.swift in Sources */,
 				356A3D14284F80F1002E7AD4 /* LoginViewController.swift in Sources */,
+				35760BAF285A0B82006CDAFD /* FirebaseFuntion.swift in Sources */,
 				356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */,
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 				261658462850319900279D52 /* RegisterUserViewController.swift in Sources */,
