@@ -12,6 +12,7 @@ class FirebaseFunction{
     var ref = Database.database().reference().child("users")
     let simpleAlert = SimpleAlert()
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    	
     //유저 회원가입 함수
     func registerUser(_ email: String, _ password: String, _ name: String,_ viewController: UIViewController) {
         Auth.auth().createUser(withEmail: email, password: password){ (user, err) in
@@ -93,7 +94,7 @@ class FirebaseFunction{
 //            }
 //        })
 //    }
-    //회원이 헬스장을 추가하는 함수
+    // 헬스장 이름 불러오고 타이틀 수정해주는 함수
     func setViewTitle(_ uid: String,_ viewController: UIViewController){
         ref.child(uid).observe(.value, with: {snapShot in
             let value = snapShot.value as? NSDictionary
