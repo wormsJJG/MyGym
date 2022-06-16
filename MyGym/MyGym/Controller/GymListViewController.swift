@@ -13,7 +13,7 @@ class GymListViewController: UIViewController {
     let db = Database.database().reference().child("users")
     let fireFun = FirebaseFunction()
     var healthClubList: [HealthClub] = []
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
@@ -52,7 +52,4 @@ extension GymListViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.detailLabel.text = healthClubList[indexPath.item].location
         return cell
     }
-    
-    
-    
 }
