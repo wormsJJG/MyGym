@@ -29,7 +29,7 @@ class FirebaseFunction{
     func loginUser(_ email: String,_ password: String,_ viewController: UIViewController){
         Auth.auth().signIn(withEmail: email, password: password) { (user, err) in
             if user != nil {
-                let homeVC = self.storyboard.instantiateViewController(withIdentifier: "HomeVC") as! GymListViewController
+                let homeVC = self.storyboard.instantiateViewController(withIdentifier: "HomeVC") as! MyPageViewController
                 homeVC.userUid = user?.user.uid ?? "ERROR"
                 viewController.navigationController?.pushViewController(homeVC, animated: true)
             }else{

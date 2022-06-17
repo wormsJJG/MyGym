@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		261658462850319900279D52 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261658452850319900279D52 /* RegisterUserViewController.swift */; };
 		26410CF72855B37900797104 /* GymSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26410CF62855B37900797104 /* GymSelectViewController.swift */; };
-		26749A632852360300FAD08E /* GymListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26749A622852360300FAD08E /* GymListViewController.swift */; };
+		26749A632852360300FAD08E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26749A622852360300FAD08E /* MyPageViewController.swift */; };
 		26749A6528523A2100FAD08E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26749A6428523A2100FAD08E /* GoogleService-Info.plist */; };
 		268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C8F86285971A20086E6EC /* RegisterGymViewController.swift */; };
 		356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CDF284F7F1B002E7AD4 /* AppDelegate.swift */; };
@@ -53,7 +53,7 @@
 		261658452850319900279D52 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		26410CF62855B37900797104 /* GymSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymSelectViewController.swift; sourceTree = "<group>"; };
 		26410CF82855BBEA00797104 /* GymSelectInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymSelectInfoViewController.swift; sourceTree = "<group>"; };
-		26749A622852360300FAD08E /* GymListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymListViewController.swift; sourceTree = "<group>"; };
+		26749A622852360300FAD08E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		26749A6428523A2100FAD08E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		268C8F86285971A20086E6EC /* RegisterGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGymViewController.swift; sourceTree = "<group>"; };
 		2A37FB4758DF31B53A1B8F65 /* Pods-MyGym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGym.release.xcconfig"; path = "Target Support Files/Pods-MyGym/Pods-MyGym.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				358A85E3285B59ED00D6D7B0 /* cell */,
 				356A3D13284F80F1002E7AD4 /* LoginViewController.swift */,
 				261658452850319900279D52 /* RegisterUserViewController.swift */,
-				26749A622852360300FAD08E /* GymListViewController.swift */,
+				26749A622852360300FAD08E /* MyPageViewController.swift */,
 				26410CF62855B37900797104 /* GymSelectViewController.swift */,
 				26410CF82855BBEA00797104 /* GymSelectInfoViewController.swift */,
 				268C8F86285971A20086E6EC /* RegisterGymViewController.swift */,
@@ -485,7 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26410CF72855B37900797104 /* GymSelectViewController.swift in Sources */,
-				26749A632852360300FAD08E /* GymListViewController.swift in Sources */,
+				26749A632852360300FAD08E /* MyPageViewController.swift in Sources */,
 				358A85DE285B595F00D6D7B0 /* FirebaseFuntion.swift in Sources */,
 				358A85E7285B5AD400D6D7B0 /* GymListCollectionViewCell.swift in Sources */,
 				268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */,
