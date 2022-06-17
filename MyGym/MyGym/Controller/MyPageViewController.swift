@@ -9,7 +9,9 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class GymListViewController: UIViewController {
+class MyPageViewController: UIViewController {
+    @IBOutlet weak var accountView: UIView!
+    @IBOutlet weak var btn: UIButton!
     var userUid: String = ""
     var userName: String = ""
     let db = Database.database().reference().child("users")
@@ -23,8 +25,14 @@ class GymListViewController: UIViewController {
     }
     func setView(){
         fireFun.setViewTitle(userUid, self)
+        UIStyle()
     }
-    
+    func UIStyle(){
+        accountView.layer.cornerRadius = 30
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 30
+        btn.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
     
 }
 
