@@ -9,6 +9,5 @@ import UIKit
 
 class GymListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gymNameLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
     
 }

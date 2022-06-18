@@ -25,6 +25,12 @@ class HealthClub{
     var userList: [Users] = []
     var trainerList: [Trainer] = []
 }
+class UserHealthClubData{
+    var uid: String = ""
+    var name: String = ""
+    var location: String = ""
+    var phoneNumber: String = ""
+}
 class Trainer {
     var uid: String = "" // primary key
     var name: String = ""

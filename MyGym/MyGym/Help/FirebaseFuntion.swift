@@ -76,6 +76,34 @@ class FirebaseFunction{
                     }
                 }
     }
+    //유저의 헬스장 정보 가져오는 함수
+    func getUserHealthClubInfo(_ HealthClubuid: String,_ viewController: MyPageViewController){
+        ref.child(HealthClubuid).observe(.value, with: { snapShot in
+            let value = snapShot.value as? NSDictionary
+            let userHealthClubData = UserHealthClubData()
+            userHealthClubData.uid = HealthClubuid
+            userHealthClubData.name = value?["name"] as? String ?? "nil"
+            userHealthClubData.location = value?["location"] as? String ?? "nil"
+            userHealthClubData.phoneNumber = value?["phoneNumber"] as? String ?? "nil"
+            viewController.userHealthClub = userHealthClubData
+        })
+    }
+    //유저가 헬스장을 등록하는 함수
+    func gymRegistration(_ uid: String,_ healthClubUid: String){
+        self.ref.child(uid).updateChildValues(["healthClub":healthClubUid])
+    }
+    // 헬스장 uid 불러오고 타이틀 수정해주는 함수
+    func setViewTitle(_ uid: String,_ viewController: MyPageViewController){
+        ref.child(uid).observe(.value, with: {snapShot in
+            let value = snapShot.value as? NSDictionary
+            let userName = value?["name"] as? String ?? "nil"
+            let healthClubUid = value?["healthClub"] as? String ?? "nil"
+            viewController.userHealthClubUid = healthClubUid
+            self.getUserHealthClubInfo(healthClubUid, viewController)
+            viewController.navigationItem.title = "\(userName)님 페이지"
+            viewController.healthClubView.reloadData()
+        })
+    }
     //헬스장 가져오는 함수
 //    func getHealthClubList(){
 //        ref.observeSingleEvent(of: .value, with: { snapshot in
@@ -94,13 +122,5 @@ class FirebaseFunction{
 //            }
 //        })
 //    }
-    // 헬스장 이름 불러오고 타이틀 수정해주는 함수
-    func setViewTitle(_ uid: String,_ viewController: UIViewController){
-        ref.child(uid).observe(.value, with: {snapShot in
-            let value = snapShot.value as? NSDictionary
-            let userName = value?["name"] as? String ?? ""
-            viewController.navigationItem.title = "\(userName)님 페이지"
-        })
-    }
 }
 
