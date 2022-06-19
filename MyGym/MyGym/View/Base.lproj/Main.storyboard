@@ -120,6 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWl-Wj-Rht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="665" y="-27"/>
         </scene>
         <!--님, 환영합니다.-->
         <scene sceneID="IhX-Lw-kN8">
@@ -262,7 +263,6 @@
         <!--Navigation Controller-->
         <scene sceneID="f4f-Sh-oe5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pAb-g8-VSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k1A-lN-ATj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WAP-r0-ar2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -272,6 +272,7 @@
                         <segue destination="OOE-M0-wEY" kind="relationship" relationship="rootViewController" id="a6i-v9-hRs"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAb-g8-VSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1809" y="376"/>
         </scene>
