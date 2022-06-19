@@ -660,6 +660,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="healthClubLocation" destination="sly-QW-Ny4" id="ZEg-rg-zAj"/>
+                        <outlet property="healthClubPhoneNumber" destination="VPy-tU-CvX" id="1ZO-HC-khW"/>
                         <outlet property="healthClubTitle" destination="9XI-yY-YZ9" id="MLL-kZ-bih"/>
                     </connections>
                 </viewController>

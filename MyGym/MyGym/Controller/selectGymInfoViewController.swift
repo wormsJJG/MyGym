@@ -10,9 +10,20 @@ import UIKit
 class selectGymInfoViewController: UIViewController {
     var selectHealthClub: HealthClub!
     @IBOutlet weak var healthClubTitle: UILabel!
+    @IBOutlet weak var healthClubLocation: UILabel!
+    @IBOutlet weak var healthClubPhoneNumber: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setView()
+    }
+    fileprivate func setView(){
+        setSelectHealthInfo()
+    }
+    fileprivate func setSelectHealthInfo(){
+        healthClubTitle.text = selectHealthClub.name
+        healthClubLocation.text = "주소: \(selectHealthClub.location)"
+        healthClubPhoneNumber.text = "주소: \(selectHealthClub.phoneNumber)"
     }
     @IBAction func addButtonClick(_ sender: Any) {
     }
