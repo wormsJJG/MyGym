@@ -29,9 +29,9 @@ class FirebaseFunction{
     func loginUser(_ email: String,_ password: String,_ viewController: UIViewController){
         Auth.auth().signIn(withEmail: email, password: password) { (user, err) in
             if user != nil {
-                let homeVC = self.storyboard.instantiateViewController(withIdentifier: "HomeVC") as! MyPageViewController
-                homeVC.userUid = user?.user.uid ?? "ERROR"
-                viewController.navigationController?.pushViewController(homeVC, animated: true)
+                let check = self.storyboard.instantiateViewController(withIdentifier: "Check") as! CheckViewController
+                check.uid = user?.user.uid ?? "nil"
+                viewController.navigationController?.pushViewController(check, animated: true)
             }else{
                 self.simpleAlert.ErrorAlert("로그인 실패", "아이디 또는 비밀번호가 일치하지 않습니다.", viewController)
                 print("Error : \(err!)")
@@ -102,6 +102,29 @@ class FirebaseFunction{
             self.getUserHealthClubInfo(healthClubUid, viewController)
         })
     }
-    //헬스장 가져오는 함수
+    //check
+    func check(_ viewController: UIViewController,_ uid: String){
+        self.ref.child(uid).observe(.value, with: { snapShot in
+            let value = snapShot.value as? NSDictionary
+            let type = value?["type"] as? String ?? "nil"
+            if(type=="HealthClub"){
+                let storyboard = UIStoryboard(name: "HealthClub", bundle: nil)
+                let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
+                mainVC.uid = uid
+                viewController.navigationController?.pushViewController(mainVC, animated: true)
+            }else if(type=="User"){
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let myPageVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! MyPageViewController
+                myPageVC.userUid = uid
+                viewController.navigationController?.pushViewController(myPageVC, animated: true)
+            }else{
+                let storyboard = UIStoryboard(name: "Trainer", bundle: nil)
+                let trainerMainVC = storyboard.instantiateViewController(withIdentifier: "main") as! TrainerMainViewController
+                trainerMainVC.uid = uid
+                viewController.navigationController?.pushViewController(trainerMainVC, animated: true)
+            }
+            
+        })
     }
+}
 
