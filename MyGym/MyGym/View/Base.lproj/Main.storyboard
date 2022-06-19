@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWl-Wj-Rht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="-27"/>
+            <point key="canvasLocation" x="665" y="139"/>
         </scene>
         <!--님, 환영합니다.-->
         <scene sceneID="IhX-Lw-kN8">
@@ -252,8 +252,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="회원 정보" id="fOZ-M0-wqh"/>
                     <connections>
-                        <outlet property="emailLabel" destination="ItC-we-0m4" id="I80-yS-4xD"/>
-                        <outlet property="nameLabel" destination="Ihs-aX-3ET" id="8IM-Ze-j2u"/>
+                        <outlet property="emailLabel" destination="ItC-we-0m4" id="KUv-gd-6t6"/>
+                        <outlet property="nameLabel" destination="Ihs-aX-3ET" id="DAd-Nd-nOK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHo-Ge-9dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -274,7 +274,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAb-g8-VSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="376"/>
+            <point key="canvasLocation" x="1842" y="420"/>
         </scene>
         <!--헬스장 선택-->
         <scene sceneID="kMA-PI-PvP">
@@ -568,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PE5-tS-I9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="151"/>
+            <point key="canvasLocation" x="980" y="804"/>
         </scene>
         <!--Select Gym Info View Controller-->
         <scene sceneID="zkB-j0-IBd">
@@ -811,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-WY-OHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="151"/>
+            <point key="canvasLocation" x="-414" y="100"/>
         </scene>
         <!--Check View Controller-->
         <scene sceneID="M12-MN-iND">
