@@ -12,6 +12,7 @@
 		26749A632852360300FAD08E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26749A622852360300FAD08E /* MyPageViewController.swift */; };
 		26749A6528523A2100FAD08E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26749A6428523A2100FAD08E /* GoogleService-Info.plist */; };
 		268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C8F86285971A20086E6EC /* RegisterGymViewController.swift */; };
+		26D29335285F5A710011FB91 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D29334285F5A710011FB91 /* AccountInfoViewController.swift */; };
 		356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CDF284F7F1B002E7AD4 /* AppDelegate.swift */; };
 		356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CE1284F7F1B002E7AD4 /* SceneDelegate.swift */; };
 		356A3CE7284F7F1B002E7AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356A3CE5284F7F1B002E7AD4 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		26749A622852360300FAD08E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		26749A6428523A2100FAD08E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		268C8F86285971A20086E6EC /* RegisterGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGymViewController.swift; sourceTree = "<group>"; };
+		26D29334285F5A710011FB91 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
 		2A37FB4758DF31B53A1B8F65 /* Pods-MyGym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGym.release.xcconfig"; path = "Target Support Files/Pods-MyGym/Pods-MyGym.release.xcconfig"; sourceTree = "<group>"; };
 		356A3CDC284F7F1B002E7AD4 /* MyGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		356A3CDF284F7F1B002E7AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				35D2E80E285F38EB0014A544 /* selectGymInfoViewController.swift in Sources */,
 				35D2E817285F5B220014A544 /* MainViewController.swift in Sources */,
 				356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */,
+				26D29335285F5A710011FB91 /* AccountInfoViewController.swift in Sources */,
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 				358A85DD285B595F00D6D7B0 /* SimpleAlert.swift in Sources */,
 				261658462850319900279D52 /* RegisterUserViewController.swift in Sources */,
