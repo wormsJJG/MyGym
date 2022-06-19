@@ -55,8 +55,7 @@ extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = healthClubView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GymListCollectionViewCell
-        cell.gymNameLabel.text = userHealthClub.name
+        let cell = healthClubView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyPageCollectionViewCell
         return cell
     }
 }

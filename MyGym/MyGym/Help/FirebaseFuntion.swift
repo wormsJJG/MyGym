@@ -33,7 +33,7 @@ class FirebaseFunction{
                 homeVC.userUid = user?.user.uid ?? "ERROR"
                 viewController.navigationController?.pushViewController(homeVC, animated: true)
             }else{
-                self.simpleAlert.ErrorAlert("로그인 실패", "아아디 또는 비밀번호가 일치하지않습니다.", viewController)
+                self.simpleAlert.ErrorAlert("로그인 실패", "아이디 또는 비밀번호가 일치하지 않습니다.", viewController)
                 print("Error : \(err!)")
             }
         }
