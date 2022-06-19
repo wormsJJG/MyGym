@@ -12,7 +12,6 @@
 		26749A632852360300FAD08E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26749A622852360300FAD08E /* MyPageViewController.swift */; };
 		26749A6528523A2100FAD08E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26749A6428523A2100FAD08E /* GoogleService-Info.plist */; };
 		268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C8F86285971A20086E6EC /* RegisterGymViewController.swift */; };
-		26D29335285F5A710011FB91 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D29334285F5A710011FB91 /* AccountInfoViewController.swift */; };
 		356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CDF284F7F1B002E7AD4 /* AppDelegate.swift */; };
 		356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CE1284F7F1B002E7AD4 /* SceneDelegate.swift */; };
 		356A3CE7284F7F1B002E7AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356A3CE5284F7F1B002E7AD4 /* Main.storyboard */; };
@@ -33,6 +32,7 @@
 		35D2E817285F5B220014A544 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D2E816285F5B220014A544 /* MainViewController.swift */; };
 		35D2E819285F5CE00014A544 /* Trainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D2E818285F5CE00014A544 /* Trainer.storyboard */; };
 		35D2E81C285F5D2C0014A544 /* TrainerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D2E81B285F5D2C0014A544 /* TrainerMainViewController.swift */; };
+		35D2E824285F68280014A544 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D2E822285F66BE0014A544 /* AccountInfoViewController.swift */; };
 		936A720582D1ACFD403136BE /* Pods_MyGym.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E25E7C1E4C89B5DE70E9F47 /* Pods_MyGym.framework */; };
 		B038D662719897E72AB5F9DB /* Pods_MyGym_MyGymUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94DF51A6E1600105F52729 /* Pods_MyGym_MyGymUITests.framework */; };
 		BB0A375CFD3DFF2FBC758DAF /* Pods_MyGymTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F182D13E6682860EA95E3B8 /* Pods_MyGymTests.framework */; };
@@ -89,6 +89,7 @@
 		35D2E816285F5B220014A544 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		35D2E818285F5CE00014A544 /* Trainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trainer.storyboard; sourceTree = "<group>"; };
 		35D2E81B285F5D2C0014A544 /* TrainerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerMainViewController.swift; sourceTree = "<group>"; };
+		35D2E822285F66BE0014A544 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
 		51FD8312E44EC7BA3F244955 /* Pods-MyGymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGymTests.debug.xcconfig"; path = "Target Support Files/Pods-MyGymTests/Pods-MyGymTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E25E7C1E4C89B5DE70E9F47 /* Pods_MyGym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE94DF51A6E1600105F52729 /* Pods_MyGym_MyGymUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGym_MyGymUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +135,7 @@
 				356A3CDD284F7F1B002E7AD4 /* Products */,
 				A50C86B04D52D906CB292BC8 /* Pods */,
 				7013BB1E58A7A702C77F1724 /* Frameworks */,
+				35D2E81D285F63BB0014A544 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +264,7 @@
 				26410CF62855B37900797104 /* GymSelectViewController.swift */,
 				268C8F86285971A20086E6EC /* RegisterGymViewController.swift */,
 				35D2E80D285F38EB0014A544 /* selectGymInfoViewController.swift */,
+				35D2E822285F66BE0014A544 /* AccountInfoViewController.swift */,
 			);
 			path = UserView;
 			sourceTree = "<group>";
@@ -272,6 +275,14 @@
 				35D2E81B285F5D2C0014A544 /* TrainerMainViewController.swift */,
 			);
 			path = TrainerView;
+			sourceTree = "<group>";
+		};
+		35D2E81D285F63BB0014A544 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				26D29334285F5A710011FB91 /* AccountInfoViewController.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		7013BB1E58A7A702C77F1724 /* Frameworks */ = {
@@ -546,12 +557,12 @@
 				358A85E7285B5AD400D6D7B0 /* MyPageCollectionViewCell.swift in Sources */,
 				268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */,
 				356A3D14284F80F1002E7AD4 /* LoginViewController.swift in Sources */,
+				35D2E824285F68280014A544 /* AccountInfoViewController.swift in Sources */,
 				35D2E80C285F2E000014A544 /* gymListCollectionViewCell.swift in Sources */,
 				358A85E0285B599100D6D7B0 /* Model.swift in Sources */,
 				35D2E80E285F38EB0014A544 /* selectGymInfoViewController.swift in Sources */,
 				35D2E817285F5B220014A544 /* MainViewController.swift in Sources */,
 				356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */,
-				26D29335285F5A710011FB91 /* AccountInfoViewController.swift in Sources */,
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 				358A85DD285B595F00D6D7B0 /* SimpleAlert.swift in Sources */,
 				261658462850319900279D52 /* RegisterUserViewController.swift in Sources */,
