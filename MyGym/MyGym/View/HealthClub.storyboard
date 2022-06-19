@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i1e-W9-8lk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="791-Zt-Uge">
+            <objects>
+                <viewController id="ehM-fG-2VT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="khs-5Q-OeM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="P3v-X5-mQC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="B8d-bD-VNy"/>
+                    <navigationItem key="navigationItem" id="TS1-hJ-Sq8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxK-iP-rJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="265"/>
+        </scene>
+        <!--재근헬스장-->
+        <scene sceneID="Y2s-uQ-E0N">
+            <objects>
+                <viewController storyboardIdentifier="main" id="T2z-zq-RnS" customClass="MainViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aI-5P-sAn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xfj-Dc-usA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="메인" id="oeQ-yI-XRe"/>
+                    <navigationItem key="navigationItem" title="재근헬스장" id="szT-VK-tub"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo6-FN-Sg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="-412"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="huN-b6-2bn">
+            <objects>
+                <tabBarController id="i1e-W9-8lk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hrx-Qx-KdL"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U4d-Q6-I85">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="T2z-zq-RnS" kind="relationship" relationship="viewControllers" id="2sq-5T-KE5"/>
+                        <segue destination="ehM-fG-2VT" kind="relationship" relationship="viewControllers" id="zar-FT-qtf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mse-dg-T1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1267" y="-92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

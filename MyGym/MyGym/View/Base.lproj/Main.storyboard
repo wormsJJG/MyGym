@@ -120,7 +120,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWl-Wj-Rht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="-577"/>
         </scene>
         <!--님, 환영합니다.-->
         <scene sceneID="IhX-Lw-kN8">
@@ -649,7 +648,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdD-qB-wij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978" y="-244"/>
+            <point key="canvasLocation" x="-1057" y="-288"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="tzb-BO-EE5">
@@ -812,6 +811,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-WY-OHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="354" y="151"/>
+        </scene>
+        <!--Check View Controller-->
+        <scene sceneID="M12-MN-iND">
+            <objects>
+                <viewController storyboardIdentifier="Check" id="ou8-wu-vfZ" customClass="CheckViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIH-n8-eDF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ldN-5T-bWE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBn-wv-3kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1058" y="-1651"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NA5-LH-6yQ">
