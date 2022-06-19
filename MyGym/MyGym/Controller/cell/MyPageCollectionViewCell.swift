@@ -7,7 +7,5 @@
 
 import UIKit
 
-class GymListCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var gymNameLabel: UILabel!
-    
+class MyPageCollectionViewCell: UICollectionViewCell {
 }
