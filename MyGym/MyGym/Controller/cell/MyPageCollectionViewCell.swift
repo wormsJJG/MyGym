@@ -8,4 +8,6 @@
 import UIKit
 
 class MyPageCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var healthClubTitle: UILabel!
 }

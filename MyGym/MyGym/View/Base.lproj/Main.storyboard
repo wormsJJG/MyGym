@@ -130,9 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-A9-KH2">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-A9-KH2">
                                 <rect key="frame" x="0.0" y="162" width="414" height="700"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Frd-Dx-biv">
                                     <size key="itemSize" width="346" height="300"/>
@@ -148,20 +147,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="346" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-99-YLh">
-                                                    <rect key="frame" x="8" y="44" width="330" height="248"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-99-YLh">
+                                                    <rect key="frame" x="8" y="52" width="330" height="240"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="240" id="EQS-on-Oy3"/>
+                                                        <constraint firstAttribute="width" constant="330" id="RKL-ss-J9p"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="헬스장이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ir-UC-kJl">
-                                                    <rect key="frame" x="8" y="0.0" width="330" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="헬스장이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ir-UC-kJl">
+                                                    <rect key="frame" x="8" y="8" width="330" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="Pe2-Jb-ZDL"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="Qlm-TQ-DDd"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3Ir-UC-kJl" firstAttribute="top" secondItem="pp8-Ip-y3o" secondAttribute="top" constant="8" id="4R6-oP-MeW"/>
+                                                <constraint firstItem="rNL-99-YLh" firstAttribute="bottom" secondItem="pp8-Ip-y3o" secondAttribute="bottomMargin" id="9Qh-4b-LTz"/>
+                                                <constraint firstItem="rNL-99-YLh" firstAttribute="top" secondItem="3Ir-UC-kJl" secondAttribute="bottom" constant="8" id="BLY-ad-zLY"/>
+                                                <constraint firstItem="3Ir-UC-kJl" firstAttribute="trailing" secondItem="rNL-99-YLh" secondAttribute="trailing" id="FoY-gN-970"/>
+                                                <constraint firstItem="3Ir-UC-kJl" firstAttribute="leading" secondItem="rNL-99-YLh" secondAttribute="leading" id="MvX-zw-Sdv"/>
+                                                <constraint firstItem="3Ir-UC-kJl" firstAttribute="leading" secondItem="pp8-Ip-y3o" secondAttribute="leadingMargin" id="ZYq-QH-LtQ"/>
+                                                <constraint firstItem="3Ir-UC-kJl" firstAttribute="trailing" secondItem="pp8-Ip-y3o" secondAttribute="trailingMargin" id="ndp-ZY-5pg"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="346" height="300"/>
+                                        <connections>
+                                            <outlet property="healthClubTitle" destination="3Ir-UC-kJl" id="bWU-gW-Y8i"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -172,6 +189,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="882-WK-pZd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mSz-A9-KH2" firstAttribute="leading" secondItem="882-WK-pZd" secondAttribute="leading" id="8jO-wf-9mn"/>
+                            <constraint firstItem="mSz-A9-KH2" firstAttribute="centerX" secondItem="g1n-rq-oMz" secondAttribute="centerX" id="Ea6-N5-pb3"/>
+                            <constraint firstItem="mSz-A9-KH2" firstAttribute="bottom" secondItem="882-WK-pZd" secondAttribute="bottom" id="Xf6-Os-xeW"/>
+                            <constraint firstItem="mSz-A9-KH2" firstAttribute="top" secondItem="882-WK-pZd" secondAttribute="top" constant="74" id="reb-fg-RFK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="님, 환영합니다." leftItemsSupplementBackButton="YES" id="VNx-Z0-8Qb">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="i9k-6C-npg">
@@ -187,7 +210,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="healthClubView" destination="mSz-A9-KH2" id="L6M-zI-2xK"/>
+                        <outlet property="healthClubView" destination="mSz-A9-KH2" id="ElA-vW-HzC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0V-lb-0eY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,64 +308,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PY7-am-6ly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="-958"/>
+            <point key="canvasLocation" x="3036" y="-984"/>
         </scene>
-        <!--Gym Select View Controller-->
+        <!--헬스장 선택-->
         <scene sceneID="kMA-PI-PvP">
             <objects>
-                <viewController id="n2y-33-r0k" customClass="GymSelectViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectGtmVC" id="n2y-33-r0k" customClass="GymSelectViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wk7-Jr-6hl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ig7-C0-kXM">
-                                <rect key="frame" x="20" y="175" width="374" height="687"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MGJ-EE-lu6">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fc0-34-hLH">
-                                    <size key="itemSize" width="374" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="722" id="6Di-Dr-ONR"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UiF-rG-vZD">
+                                    <size key="itemSize" width="203" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r7m-MC-Gc9">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GnJ-Wx-XXA">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="yPz-Gy-7m3" customClass="gymListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
+                                        <rect key="frame" x="105.5" y="0.0" width="203" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EJ2-yW-2qT">
+                                            <rect key="frame" x="0.0" y="0.0" width="203" height="250"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYm-hQ-Odc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="177"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-do-xz5">
+                                                    <rect key="frame" x="8" y="8" width="187" height="169"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="187" id="cVl-uL-7G8"/>
+                                                        <constraint firstAttribute="height" constant="169" id="wQB-Ow-NrN"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyb-bJ-Sun">
-                                                    <rect key="frame" x="0.0" y="185" width="180" height="57"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmD-w9-17F">
+                                                    <rect key="frame" x="8" y="185" width="187" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="3eP-Be-w1f"/>
+                                                        <constraint firstAttribute="height" constant="57" id="Gdo-FC-6Wm"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="sGf-XM-uch"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kmD-w9-17F" firstAttribute="leading" secondItem="EJ2-yW-2qT" secondAttribute="leading" constant="8" id="5Ea-Pb-PKG"/>
+                                                <constraint firstItem="kmD-w9-17F" firstAttribute="bottom" secondItem="EJ2-yW-2qT" secondAttribute="bottomMargin" id="AmN-e0-uxb"/>
+                                                <constraint firstItem="kmD-w9-17F" firstAttribute="leading" secondItem="ILe-do-xz5" secondAttribute="leading" id="JOF-Kx-fld"/>
+                                                <constraint firstItem="kmD-w9-17F" firstAttribute="top" secondItem="ILe-do-xz5" secondAttribute="bottom" constant="8" id="Jyf-q4-sp5"/>
+                                                <constraint firstItem="kmD-w9-17F" firstAttribute="trailing" secondItem="ILe-do-xz5" secondAttribute="trailing" id="Vlu-Z8-3h0"/>
+                                                <constraint firstAttribute="trailing" secondItem="kmD-w9-17F" secondAttribute="trailing" constant="8" id="aoJ-hP-Vep"/>
+                                                <constraint firstItem="kmD-w9-17F" firstAttribute="top" secondItem="ILe-do-xz5" secondAttribute="bottom" constant="8" symbolic="YES" id="nSC-cq-2b5"/>
+                                                <constraint firstItem="ILe-do-xz5" firstAttribute="top" secondItem="EJ2-yW-2qT" secondAttribute="top" constant="8" id="qIf-rW-1A6"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="180" height="250"/>
+                                        <size key="customSize" width="203" height="250"/>
+                                        <connections>
+                                            <outlet property="gymImage" destination="ILe-do-xz5" id="2DM-YX-xq9"/>
+                                            <outlet property="gymTitleLabel" destination="kmD-w9-17F" id="j92-pR-h7L"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="n2y-33-r0k" id="VAw-wh-vjR"/>
+                                    <outlet property="delegate" destination="n2y-33-r0k" id="vUk-qC-U7b"/>
+                                </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="검색.." translatesAutoresizingMaskIntoConstraints="NO" id="SSo-o4-bRk">
-                                <rect key="frame" x="0.0" y="114" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BBg-Bf-eNn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MGJ-EE-lu6" secondAttribute="trailing" id="OBv-JH-VdX"/>
+                            <constraint firstItem="MGJ-EE-lu6" firstAttribute="bottom" secondItem="BBg-Bf-eNn" secondAttribute="bottom" id="gB3-7z-CkM"/>
+                            <constraint firstItem="MGJ-EE-lu6" firstAttribute="leading" secondItem="Wk7-Jr-6hl" secondAttribute="leading" id="xWa-Yb-nBf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="헬스장 선택" id="KX6-20-iRR"/>
+                    <connections>
+                        <outlet property="gymListCollectionView" destination="MGJ-EE-lu6" id="yKY-Qa-jbp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0h0-0R-pOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2971.0144927536235" y="-560.49107142857144"/>
+            <point key="canvasLocation" x="1743.4782608695652" y="-555.80357142857144"/>
         </scene>
         <!--헬스장 등록-->
         <scene sceneID="Qin-pX-klA">
@@ -550,10 +604,10 @@
             </objects>
             <point key="canvasLocation" x="1258" y="151"/>
         </scene>
-        <!--Gym Select Info View Controller-->
+        <!--Select Gym Info View Controller-->
         <scene sceneID="zkB-j0-IBd">
             <objects>
-                <viewController id="M0f-5e-3ps" customClass="GymSelectInfoViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectHCVC" id="M0f-5e-3ps" customClass="selectGymInfoViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QU5-nl-EE3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -598,13 +652,16 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addConfirm:" destination="M0f-5e-3ps" eventType="touchUpInside" id="KBR-Mp-Q1b"/>
+                                    <action selector="addButtonClick:" destination="M0f-5e-3ps" eventType="touchUpInside" id="v0B-Jx-UDE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8aI-E8-m87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="healthClubTitle" destination="9XI-yY-YZ9" id="MLL-kZ-bih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFj-mQ-AlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -804,7 +861,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYd-u0-uak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="-1373"/>
+            <point key="canvasLocation" x="842" y="-1412"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AZZ-Ew-1Dv">
+            <objects>
+                <navigationController id="Gal-u6-UM3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cv7-Ft-ixC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n2y-33-r0k" kind="relationship" relationship="rootViewController" id="1td-UA-jJD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHM-Me-RcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="-1351"/>
         </scene>
     </scenes>
     <resources>

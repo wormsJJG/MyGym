@@ -39,28 +39,26 @@ class FirebaseFunction{
         }
     }
     //헬스장 목록 가져오기 함수
-    func getHealthClubList(_ collectionView: UICollectionView) -> [HealthClub]{
-        var resultList: [HealthClub] = []
+    func getHealthClubList(_ viewController: GymSelectViewController){
         ref.observeSingleEvent(of: .value, with: { snapshot in
             for child in snapshot.children{
                 let dataSnapshot = child as? DataSnapshot
                 let item = dataSnapshot?.value as? NSDictionary
+                var healthClubList: [HealthClub] = []
                 if(item?["type"] as? String == "HealthClub"){
-                    var healthClubList: [HealthClub] = []
                     let healthClub = HealthClub()
                     healthClub.name = item?["name"] as! String
                     healthClub.phoneNumber = item?["phoneNumber"] as! String
                     healthClub.location = item?["location"] as! String
                     healthClub.type = item?["type"] as! String
                     healthClubList.append(healthClub)
-                    resultList = healthClubList
                 }
+                viewController.healthClubList = healthClubList
+                viewController.gymListCollectionView.reloadData()
             }
-            
         })
-        print(resultList.count)
-        return resultList
     }
+
     //헬스장 계정 회원가입 함수
     func registerGym(_ email: String,_ password: String,_ name: String,_ phoneNumber: String,_ location: String,_ viewController: UIViewController){
         Auth.auth().createUser(withEmail: email, password: password){ (HealthClub, err) in
@@ -86,6 +84,7 @@ class FirebaseFunction{
             userHealthClubData.location = value?["location"] as? String ?? "nil"
             userHealthClubData.phoneNumber = value?["phoneNumber"] as? String ?? "nil"
             viewController.userHealthClub = userHealthClubData
+            viewController.healthClubView.reloadData()
         })
     }
     //유저가 헬스장을 등록하는 함수
@@ -99,28 +98,10 @@ class FirebaseFunction{
             let userName = value?["name"] as? String ?? "nil"
             let healthClubUid = value?["healthClub"] as? String ?? "nil"
             viewController.userHealthClubUid = healthClubUid
-            self.getUserHealthClubInfo(healthClubUid, viewController)
             viewController.navigationItem.title = "\(userName)님 페이지"
-            viewController.healthClubView.reloadData()
+            self.getUserHealthClubInfo(healthClubUid, viewController)
         })
     }
     //헬스장 가져오는 함수
-//    func getHealthClubList(){
-//        ref.observeSingleEvent(of: .value, with: { snapshot in
-//            for child in snapshot.children{
-//                let dataSnapshot = child as? DataSnapshot
-//                let item = dataSnapshot?.value as? NSDictionary
-//                if(item?["type"] as? String == "HealthClub"){
-//                    let healthClub = HealthClub()
-//                    healthClub.name = item?["name"] as! String
-//                    healthClub.phoneNumber = item?["phoneNumber"] as! String
-//                    healthClub.location = item?["location"] as! String
-//                    healthClub.type = item?["type"] as! String
-//                    self.healthClubList.append(healthClub)
-//                    self.collectionView.reloadData()
-//                }
-//            }
-//        })
-//    }
-}
+    }
 

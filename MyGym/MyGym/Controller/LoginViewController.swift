@@ -24,6 +24,7 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
+        text()
     }
     
     
@@ -43,6 +44,10 @@ class LoginViewController: UIViewController{
     func setView(){
         idTextField.delegate = self
         passWordTextField.delegate = self
+    }
+    func text(){
+        idTextField.text = "tldn1234@gmail.com"
+        passWordTextField.text = "worms1837"
     }
 }
 extension LoginViewController: UITextFieldDelegate{
