@@ -12,8 +12,7 @@ import FirebaseDatabase
 class Users{
     var uid: String = "" // primary key
     var name: String = ""
-    var attendingHealthClub: HealthClub = HealthClub()
-    var ptDate: [PtDate] = []
+    var trainerUid: String = ""
 }
 
 class HealthClub{

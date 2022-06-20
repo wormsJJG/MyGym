@@ -102,6 +102,24 @@ class FirebaseFunction{
             self.getUserHealthClubInfo(healthClubUid, viewController)
         })
     }
+    func getHealthClubUserList(_ uid: String,_ viewController: UserListViewController){
+        ref.observeSingleEvent(of: .value, with: { snapShot in
+            var userList: [Users] = []
+            for child in snapShot.children{
+                let dataSnapshot = child as? DataSnapshot
+                let item = dataSnapshot?.value as? NSDictionary
+                if(item?["healtClub"] as? String == uid){
+                    let user = Users()
+                    print("asdasdasd\(item?["name"] as? String ?? "nil")")
+                    user.name = item?["name"] as? String ?? "nil"
+                    user.uid = dataSnapshot?.key ?? "nil"
+                    userList.append(user)
+                }
+            }
+            
+            viewController.userList = userList
+        })
+    }
     //check
     func check(_ viewController: UIViewController,_ uid: String){
         self.ref.child(uid).observe(.value, with: { snapShot in
@@ -109,9 +127,13 @@ class FirebaseFunction{
             let type = value?["type"] as? String ?? "nil"
             if(type=="HealthClub"){
                 let storyboard = UIStoryboard(name: "HealthClub", bundle: nil)
-                let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
-                mainVC.uid = uid
-                viewController.navigationController?.pushViewController(mainVC, animated: true)
+                let main = storyboard.instantiateViewController(withIdentifier: "main") as! UserListViewController
+                main.uid = uid
+                viewController.navigationController?.pushViewController(main, animated: true)
+    //                let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
+//                mainVC.uid = uid
+//                viewController.show(mainVC, sender: nil)
+//                viewController.navigationController?.pushViewController(mainVC, animated: true)
             }else if(type=="User"){
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let myPageVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! MyPageViewController
