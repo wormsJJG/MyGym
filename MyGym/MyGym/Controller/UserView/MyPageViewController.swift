@@ -28,7 +28,7 @@ class MyPageViewController: UIViewController {
         fireFun.setViewTitle(userUid, self)
         healthClubView.delegate = self
         healthClubView.dataSource = self
-        
+        navigationItem.hidesBackButton = true
 //        UIStyle()
     }
 //    func UIStyle(){

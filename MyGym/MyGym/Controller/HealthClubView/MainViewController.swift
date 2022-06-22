@@ -14,10 +14,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        setView()
     }
-    
+    fileprivate func setView(){
+        navigationItem.hidesBackButton = true
+    }
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

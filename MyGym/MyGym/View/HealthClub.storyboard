@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--재근헬스장-->
+        <!--회원목록/관리-->
         <scene sceneID="Y2s-uQ-E0N">
             <objects>
                 <viewController storyboardIdentifier="userListVC" id="T2z-zq-RnS" customClass="UserListViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="메인" id="oeQ-yI-XRe"/>
-                    <navigationItem key="navigationItem" title="재근헬스장" id="szT-VK-tub"/>
+                    <navigationItem key="navigationItem" title="회원목록/관리" id="szT-VK-tub"/>
                     <connections>
                         <outlet property="userListTableView" destination="AY4-dm-GNN" id="lpr-bl-gkd"/>
                     </connections>
