@@ -127,7 +127,7 @@ class FirebaseFunction{
             let type = value?["type"] as? String ?? "nil"
             if(type=="HealthClub"){
                 let storyboard = UIStoryboard(name: "HealthClub", bundle: nil)
-                let main = storyboard.instantiateViewController(withIdentifier: "main") as! UserListViewController
+                let main = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
                 main.uid = uid
                 viewController.navigationController?.pushViewController(main, animated: true)
     //                let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController

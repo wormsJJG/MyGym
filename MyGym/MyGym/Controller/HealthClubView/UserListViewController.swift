@@ -18,12 +18,6 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
         setView()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print("asdasd\(uid)")
-        
-        
-    }
-    
     fileprivate func setView(){
         userListTableView.delegate = self
         userListTableView.dataSource = self

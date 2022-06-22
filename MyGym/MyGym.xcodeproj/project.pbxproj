@@ -12,6 +12,7 @@
 		26749A632852360300FAD08E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26749A622852360300FAD08E /* MyPageViewController.swift */; };
 		26749A6528523A2100FAD08E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26749A6428523A2100FAD08E /* GoogleService-Info.plist */; };
 		268C8F87285971A20086E6EC /* RegisterGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C8F86285971A20086E6EC /* RegisterGymViewController.swift */; };
+		352DCE93286348AA0069C5BD /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DCE92286348AA0069C5BD /* MenuListCollectionViewCell.swift */; };
 		356203632860958200DA3072 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356203622860958200DA3072 /* UserListViewController.swift */; };
 		356203672860A41B00DA3072 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356203662860A41B00DA3072 /* UserListTableViewCell.swift */; };
 		356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3CDF284F7F1B002E7AD4 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 		268C8F86285971A20086E6EC /* RegisterGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGymViewController.swift; sourceTree = "<group>"; };
 		26D29334285F5A710011FB91 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
 		2A37FB4758DF31B53A1B8F65 /* Pods-MyGym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGym.release.xcconfig"; path = "Target Support Files/Pods-MyGym/Pods-MyGym.release.xcconfig"; sourceTree = "<group>"; };
+		352DCE92286348AA0069C5BD /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
 		356203622860958200DA3072 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		356203662860A41B00DA3072 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		356A3CDC284F7F1B002E7AD4 /* MyGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				356203662860A41B00DA3072 /* UserListTableViewCell.swift */,
+				352DCE92286348AA0069C5BD /* MenuListCollectionViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 				358A85DD285B595F00D6D7B0 /* SimpleAlert.swift in Sources */,
 				261658462850319900279D52 /* RegisterUserViewController.swift in Sources */,
+				352DCE93286348AA0069C5BD /* MenuListCollectionViewCell.swift in Sources */,
 				35D2E813285F58E10014A544 /* CheckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

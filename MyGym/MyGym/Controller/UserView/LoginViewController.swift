@@ -46,7 +46,7 @@ class LoginViewController: UIViewController{
         passWordTextField.delegate = self
     }
     func text(){
-        idTextField.text = "tldn1234@gmail.com"
+        idTextField.text = "wnstj1234@gmail.com"
         passWordTextField.text = "worms1837"
     }
 }
