@@ -21,19 +21,7 @@ class UserListViewController: UIViewController {
     fileprivate func setView(){
         userListTableView.delegate = self
         userListTableView.dataSource = self
-        ref.observeSingleEvent(of: .value, with: { snapShot in
-            for child in snapShot.children{
-                let dataSnapshot = child as? DataSnapshot
-                let item = dataSnapshot?.value as? NSDictionary
-                if(item?["healthClub"] as? String == self.uid){
-                    let user = Users()
-                    user.name = item?["name"] as? String ?? "nil"
-                    user.uid = dataSnapshot?.key ?? "nil"
-                    self.userList.append(user)
-                }
-                self.userListTableView.reloadData()
-            }
-        })
+        fireFun.getHealthClubUserList(uid, self)
     }
 }
 extension UserListViewController: UITableViewDelegate, UITableViewDataSource{

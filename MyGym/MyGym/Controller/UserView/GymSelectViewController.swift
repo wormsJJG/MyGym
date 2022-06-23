@@ -17,24 +17,7 @@ class GymSelectViewController: UIViewController {
         setView()
     }
     fileprivate func setView(){
-        getHealthClubList()
-    }
-    func getHealthClubList(){
-        ref.observeSingleEvent(of: .value, with: { snapshot in
-            for child in snapshot.children{
-                let dataSnapshot = child as? DataSnapshot
-                let item = dataSnapshot?.value as? NSDictionary
-                if(item?["type"] as? String == "HealthClub"){
-                    let healthClub = HealthClub()
-                    healthClub.name = item?["name"] as! String
-                    healthClub.phoneNumber = item?["phoneNumber"] as! String
-                    healthClub.location = item?["location"] as! String
-                    healthClub.type = item?["type"] as! String
-                    self.healthClubList.append(healthClub)
-                }
-                self.gymListCollectionView.reloadData()
-            }
-        })
+        fireFun.getHealthClubList(self)
     }
 }
 extension GymSelectViewController: UICollectionViewDelegate, UICollectionViewDataSource{

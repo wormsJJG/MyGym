@@ -45,16 +45,14 @@ class FirebaseFunction{
             for child in snapshot.children{
                 let dataSnapshot = child as? DataSnapshot
                 let item = dataSnapshot?.value as? NSDictionary
-                var healthClubList: [HealthClub] = []
                 if(item?["type"] as? String == "HealthClub"){
                     let healthClub = HealthClub()
                     healthClub.name = item?["name"] as! String
                     healthClub.phoneNumber = item?["phoneNumber"] as! String
                     healthClub.location = item?["location"] as! String
                     healthClub.type = item?["type"] as! String
-                    healthClubList.append(healthClub)
+                    viewController.healthClubList.append(healthClub)
                 }
-                viewController.healthClubList = healthClubList
                 viewController.gymListCollectionView.reloadData()
             }
         })
@@ -105,21 +103,19 @@ class FirebaseFunction{
     }
     func getHealthClubUserList(_ uid: String,_ viewController: UserListViewController){
         ref.observeSingleEvent(of: .value, with: { snapShot in
-            var userList: [Users] = []
             for child in snapShot.children{
                 let dataSnapshot = child as? DataSnapshot
                 let item = dataSnapshot?.value as? NSDictionary
-                if(item?["healtClub"] as? String == uid){
+                if(item?["healthClub"] as? String == uid){
                     let user = Users()
-                    print("asdasdasd\(item?["name"] as? String ?? "nil")")
                     user.name = item?["name"] as? String ?? "nil"
                     user.uid = dataSnapshot?.key ?? "nil"
-                    userList.append(user)
+                    viewController.userList.append(user)
                 }
+                    viewController.userListTableView.reloadData()
             }
-            
-            viewController.userList = userList
         })
+
     }
     //check
     func check(_ viewController: UIViewController,_ uid: String){
