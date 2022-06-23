@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import UIKit
 class FirebaseFunction{
     var ref = Database.database().reference().child("users")
     let simpleAlert = SimpleAlert()
@@ -130,10 +131,6 @@ class FirebaseFunction{
                 let main = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
                 main.uid = uid
                 viewController.navigationController?.pushViewController(main, animated: true)
-    //                let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
-//                mainVC.uid = uid
-//                viewController.show(mainVC, sender: nil)
-//                viewController.navigationController?.pushViewController(mainVC, animated: true)
             }else if(type=="User"){
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let myPageVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! MyPageViewController

@@ -5,63 +5,109 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="hKL-xf-k0F">
+        <!--Navigation Controller-->
+        <scene sceneID="E7C-t3-tHa">
             <objects>
-                <viewController id="KxZ-e9-wex" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xns-FM-OeW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="aka-cr-R0f"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="sDR-15-e32"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YJz-sP-Lw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-387" y="456"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="i4V-3e-TTr">
-            <objects>
-                <viewController id="pxz-fc-GZq" customClass="TrainerMainViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Yqs-hc-3HM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="d83-BP-Ul2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="vhL-uH-DA5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ahW-oZ-o2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-387" y="-151"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="42a-i9-DyF">
-            <objects>
-                <tabBarController id="l9P-TC-ojj" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="944-1a-GOv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                <navigationController id="dIC-ym-Zgx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="y0n-G8-HOa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
+                    </navigationBar>
                     <connections>
-                        <segue destination="pxz-fc-GZq" kind="relationship" relationship="viewControllers" id="MZi-yj-CPc"/>
-                        <segue destination="KxZ-e9-wex" kind="relationship" relationship="viewControllers" id="xhp-XK-EyS"/>
+                        <segue destination="dnh-O6-pNk" kind="relationship" relationship="rootViewController" id="7aT-19-xsb"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ltG-Tq-1EW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwD-eD-Dh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1277" y="153"/>
+            <point key="canvasLocation" x="-1255" y="-1040"/>
+        </scene>
+        <!--트레이너 페이지-->
+        <scene sceneID="E4J-Y0-i9S">
+            <objects>
+                <viewController storyboardIdentifier="main" id="dnh-O6-pNk" customClass="TrainerMainViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jec-Ig-qjh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QpG-H6-iCi">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="nRn-od-Nix">
+                                    <size key="itemSize" width="350" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0do-PD-d5d" customClass="TMenuListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="8" width="360" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zBJ-MW-Kn9">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메뉴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H5-2K-hT8">
+                                                    <rect key="frame" x="8" y="31" width="344" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="344" id="npt-Rg-WfM"/>
+                                                        <constraint firstAttribute="height" constant="68" id="rPA-dW-xsK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                            <constraints>
+                                                <constraint firstItem="2H5-2K-hT8" firstAttribute="trailing" secondItem="zBJ-MW-Kn9" secondAttribute="trailingMargin" id="2za-ET-arg"/>
+                                                <constraint firstItem="2H5-2K-hT8" firstAttribute="leading" secondItem="zBJ-MW-Kn9" secondAttribute="leading" constant="8" id="6Gl-za-nTj"/>
+                                                <constraint firstAttribute="trailing" secondItem="2H5-2K-hT8" secondAttribute="trailing" constant="8" id="SkX-S9-of6"/>
+                                                <constraint firstItem="2H5-2K-hT8" firstAttribute="leading" secondItem="zBJ-MW-Kn9" secondAttribute="leadingMargin" id="Viw-wT-L9s"/>
+                                                <constraint firstItem="2H5-2K-hT8" firstAttribute="centerY" secondItem="zBJ-MW-Kn9" secondAttribute="centerY" id="eTs-ft-Xag"/>
+                                                <constraint firstItem="2H5-2K-hT8" firstAttribute="top" secondItem="zBJ-MW-Kn9" secondAttribute="top" constant="31" id="guM-fd-dpM"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="360" height="130"/>
+                                        <connections>
+                                            <outlet property="menuTitleLabel" destination="2H5-2K-hT8" id="xNx-dj-AM8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dnh-O6-pNk" id="G6c-w0-UA6"/>
+                                    <outlet property="delegate" destination="dnh-O6-pNk" id="T0c-dx-aHA"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2AT-W1-Qdf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QpG-H6-iCi" firstAttribute="top" secondItem="2AT-W1-Qdf" secondAttribute="top" constant="44" id="MVN-NH-Le0"/>
+                            <constraint firstItem="QpG-H6-iCi" firstAttribute="centerX" secondItem="Jec-Ig-qjh" secondAttribute="centerX" id="dgc-Cn-Gha"/>
+                            <constraint firstItem="QpG-H6-iCi" firstAttribute="bottom" secondItem="2AT-W1-Qdf" secondAttribute="bottom" id="thd-xH-Nhj"/>
+                            <constraint firstItem="QpG-H6-iCi" firstAttribute="leading" secondItem="2AT-W1-Qdf" secondAttribute="leading" id="v7O-kn-NDX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="트레이너 페이지" id="6zq-jT-zSp"/>
+                    <connections>
+                        <outlet property="menuListCollectionView" destination="QpG-H6-iCi" id="Ncj-vo-NQ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cq-3k-4aV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617.39130434782612" y="-1041.2946428571429"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

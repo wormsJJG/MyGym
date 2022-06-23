@@ -27,7 +27,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = menuListCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MenuListCollectionViewCell
-        setMenuPass(indexPath.item, cell)
+        setLabel(indexPath.item, cell)
         cell.layer.cornerRadius = 12.0
         return cell
     }
@@ -42,7 +42,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             print("Error")
         }
     }
-    fileprivate func setMenuPass(_ index: Int,_ cell: MenuListCollectionViewCell){
+    fileprivate func setLabel(_ index: Int,_ cell: MenuListCollectionViewCell){
         switch index{
         case 0 :
             cell.menuNameLabel.text = "회원목록/관리"

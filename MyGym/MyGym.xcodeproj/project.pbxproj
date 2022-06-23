@@ -24,6 +24,7 @@
 		356A3D01284F7F1C002E7AD4 /* MyGymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3D00284F7F1C002E7AD4 /* MyGymUITests.swift */; };
 		356A3D03284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3D02284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift */; };
 		356A3D14284F80F1002E7AD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A3D13284F80F1002E7AD4 /* LoginViewController.swift */; };
+		35818CE72864AE740092C26F /* TMenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35818CE62864AE740092C26F /* TMenuListCollectionViewCell.swift */; };
 		358A85DD285B595F00D6D7B0 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A85DB285B595F00D6D7B0 /* SimpleAlert.swift */; };
 		358A85DE285B595F00D6D7B0 /* FirebaseFuntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A85DC285B595F00D6D7B0 /* FirebaseFuntion.swift */; };
 		358A85E0285B599100D6D7B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A85DF285B599100D6D7B0 /* Model.swift */; };
@@ -84,6 +85,7 @@
 		356A3D00284F7F1C002E7AD4 /* MyGymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITests.swift; sourceTree = "<group>"; };
 		356A3D02284F7F1C002E7AD4 /* MyGymUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGymUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		356A3D13284F80F1002E7AD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35818CE62864AE740092C26F /* TMenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMenuListCollectionViewCell.swift; sourceTree = "<group>"; };
 		358A85DB285B595F00D6D7B0 /* SimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
 		358A85DC285B595F00D6D7B0 /* FirebaseFuntion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseFuntion.swift; sourceTree = "<group>"; };
 		358A85DF285B599100D6D7B0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 			path = Help;
 			sourceTree = "<group>";
 		};
+		35818CE32864AE440092C26F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				35818CE62864AE740092C26F /* TMenuListCollectionViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		358A85E3285B59ED00D6D7B0 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +299,7 @@
 		35D2E81A285F5CFF0014A544 /* TrainerView */ = {
 			isa = PBXGroup;
 			children = (
+				35818CE32864AE440092C26F /* cell */,
 				35D2E81B285F5D2C0014A544 /* TrainerMainViewController.swift */,
 			);
 			path = TrainerView;
@@ -585,6 +596,7 @@
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 				358A85DD285B595F00D6D7B0 /* SimpleAlert.swift in Sources */,
 				261658462850319900279D52 /* RegisterUserViewController.swift in Sources */,
+				35818CE72864AE740092C26F /* TMenuListCollectionViewCell.swift in Sources */,
 				352DCE93286348AA0069C5BD /* MenuListCollectionViewCell.swift in Sources */,
 				35D2E813285F58E10014A544 /* CheckViewController.swift in Sources */,
 			);
