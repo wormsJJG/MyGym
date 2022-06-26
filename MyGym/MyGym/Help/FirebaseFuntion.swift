@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 import PhotosUI
+import FirebaseStorage
 import UIKit
 class FirebaseFunction{
     var ref = Database.database().reference().child("users")
@@ -52,6 +53,8 @@ class FirebaseFunction{
                     healthClub.phoneNumber = item?["phoneNumber"] as! String
                     healthClub.location = item?["location"] as! String
                     healthClub.type = item?["type"] as! String
+                    print("asdasd\(item?["profileImageUrl"] as? String ?? "nil")")
+                    healthClub.profileImageUrl = item?["profileImageUrl"] as? String ?? "nil"
                     viewController.healthClubList.append(healthClub)
                 }
                 viewController.gymListCollectionView.reloadData()
@@ -64,8 +67,13 @@ class FirebaseFunction{
         Auth.auth().createUser(withEmail: email, password: password){ (HealthClub, err) in
                     if HealthClub != nil{
                         let image = imageView.image?.jpegData(compressionQuality: 0.1)
-                        Storage
-                        self.ref.child((HealthClub?.user.uid)!).setValue(["name": name, "phoneNumber": phoneNumber, "location": location, "type": "HealthClub"])
+                        let uid = HealthClub?.user.uid
+                        Storage.storage().reference().child("healthClubProfile").child(uid!).putData(image!, metadata: nil) { (data, err) in
+                            Storage.storage().reference().child("healthClubProfile").child(uid!).downloadURL { (url, err) in
+                                self.ref.child((HealthClub?.user.uid)!).setValue(["name": name, "phoneNumber": phoneNumber, "location": location, "type": "HealthClub", "profileImageUrl": url?.absoluteString])
+                            }
+                        }
+                        
                         //pop 2번
                         let viewControllers : [UIViewController] = viewController.navigationController!.viewControllers as [UIViewController]
                         viewController.navigationController?.popToViewController(viewControllers[viewControllers.count - 3 ], animated: true)

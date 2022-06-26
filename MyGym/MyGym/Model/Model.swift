@@ -21,6 +21,7 @@ class HealthClub{
     var location: String = ""
     var phoneNumber: String = ""
     var type: String = ""
+    var profileImageUrl: String = ""
     var userList: [Users] = []
     var trainerList: [Trainer] = []
 }

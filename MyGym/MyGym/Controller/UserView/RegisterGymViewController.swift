@@ -44,7 +44,7 @@ class RegisterGymViewController: UIViewController, PHPickerViewControllerDelegat
         }
         }
     @IBAction func addButton(_ sender: Any) {
-        fireFun.registerGym(emailTextField.text!, passwordTextField.text!, gymNameTextField.text!, phoneNumberTextField.text!, locationTextField.text!, self)
+        fireFun.registerGym(emailTextField.text!, passwordTextField.text!, gymNameTextField.text!, phoneNumberTextField.text!, locationTextField.text!, self, self.gymImageView)
     }
     func setView(){
         ref = Database.database().reference().child("users")
