@@ -85,6 +85,7 @@ class FirebaseFunction{
             viewController.userHealthClub = userHealthClubData
             viewController.healthClubView.reloadData()
         })
+        
     }
     //유저가 헬스장을 등록하는 함수
     func gymRegistration(_ uid: String,_ healthClubUid: String){

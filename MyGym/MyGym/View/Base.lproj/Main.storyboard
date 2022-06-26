@@ -271,34 +271,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MGJ-EE-lu6">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="161" width="414" height="701"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="722" id="6Di-Dr-ONR"/>
+                                    <constraint firstAttribute="height" constant="701" id="6Di-Dr-ONR"/>
+                                    <constraint firstAttribute="width" constant="414" id="8XZ-cY-hny"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="701" id="mJX-VO-iKG"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UiF-rG-vZD">
-                                    <size key="itemSize" width="203" height="250"/>
+                                    <size key="itemSize" width="350" height="272"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="yPz-Gy-7m3" customClass="gymListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
-                                        <rect key="frame" x="105.5" y="0.0" width="203" height="250"/>
+                                        <rect key="frame" x="32" y="0.0" width="350" height="272"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EJ2-yW-2qT">
-                                            <rect key="frame" x="0.0" y="0.0" width="203" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="272"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-do-xz5">
-                                                    <rect key="frame" x="8" y="8" width="187" height="169"/>
+                                                    <rect key="frame" x="8" y="8" width="334" height="191"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="187" id="cVl-uL-7G8"/>
-                                                        <constraint firstAttribute="height" constant="169" id="wQB-Ow-NrN"/>
+                                                        <constraint firstAttribute="width" constant="334" id="cVl-uL-7G8"/>
+                                                        <constraint firstAttribute="height" constant="191" id="wQB-Ow-NrN"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmD-w9-17F">
-                                                    <rect key="frame" x="8" y="185" width="187" height="57"/>
+                                                    <rect key="frame" x="8" y="207" width="334" height="57"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="3eP-Be-w1f"/>
                                                         <constraint firstAttribute="height" constant="57" id="Gdo-FC-6Wm"/>
@@ -320,7 +322,7 @@
                                                 <constraint firstItem="ILe-do-xz5" firstAttribute="top" secondItem="EJ2-yW-2qT" secondAttribute="top" constant="8" id="qIf-rW-1A6"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="203" height="250"/>
+                                        <size key="customSize" width="350" height="272"/>
                                         <connections>
                                             <outlet property="gymImage" destination="ILe-do-xz5" id="2DM-YX-xq9"/>
                                             <outlet property="gymTitleLabel" destination="kmD-w9-17F" id="j92-pR-h7L"/>
@@ -332,18 +334,35 @@
                                     <outlet property="delegate" destination="n2y-33-r0k" id="vUk-qC-U7b"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" placeholder="헬스장 이름 ex) 재근헬스장" translatesAutoresizingMaskIntoConstraints="NO" id="jtP-Bg-clm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="jnw-hv-9V4"/>
+                                    <constraint firstAttribute="height" constant="44" id="mMH-3m-Ped"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BBg-Bf-eNn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MGJ-EE-lu6" secondAttribute="trailing" id="OBv-JH-VdX"/>
+                            <constraint firstItem="jtP-Bg-clm" firstAttribute="leading" secondItem="MGJ-EE-lu6" secondAttribute="leading" id="XcF-L2-92h"/>
+                            <constraint firstItem="jtP-Bg-clm" firstAttribute="trailing" secondItem="MGJ-EE-lu6" secondAttribute="trailing" id="Yfv-xr-uvC"/>
+                            <constraint firstItem="MGJ-EE-lu6" firstAttribute="top" secondItem="jtP-Bg-clm" secondAttribute="bottom" constant="29" id="dI7-1U-6sa"/>
                             <constraint firstItem="MGJ-EE-lu6" firstAttribute="bottom" secondItem="BBg-Bf-eNn" secondAttribute="bottom" id="gB3-7z-CkM"/>
+                            <constraint firstItem="jtP-Bg-clm" firstAttribute="top" secondItem="BBg-Bf-eNn" secondAttribute="top" id="qLU-cJ-xNE"/>
                             <constraint firstItem="MGJ-EE-lu6" firstAttribute="leading" secondItem="Wk7-Jr-6hl" secondAttribute="leading" id="xWa-Yb-nBf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="헬스장 선택" id="KX6-20-iRR"/>
+                    <navigationItem key="navigationItem" title="헬스장 선택" largeTitleDisplayMode="always" id="KX6-20-iRR"/>
                     <connections>
                         <outlet property="gymListCollectionView" destination="MGJ-EE-lu6" id="yKY-Qa-jbp"/>
+                        <outlet property="searchBar" destination="jtP-Bg-clm" id="Xta-CJ-Fga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0h0-0R-pOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

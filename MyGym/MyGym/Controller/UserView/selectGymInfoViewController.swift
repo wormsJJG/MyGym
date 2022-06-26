@@ -9,6 +9,7 @@ import UIKit
 
 class selectGymInfoViewController: UIViewController {
     var selectHealthClub: HealthClub!
+    
     @IBOutlet weak var healthClubTitle: UILabel!
     @IBOutlet weak var healthClubLocation: UILabel!
     @IBOutlet weak var healthClubPhoneNumber: UILabel!
