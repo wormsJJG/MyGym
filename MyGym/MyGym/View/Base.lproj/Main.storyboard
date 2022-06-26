@@ -17,13 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJ4-SE-dba">
-                                <rect key="frame" x="70" y="174" width="274" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UJ4-SE-dba">
+                                <rect key="frame" x="70" y="174" width="274" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="wh4-Ci-BnN"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLD-6f-Tw2" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLD-6f-Tw2" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="70" y="424" width="274" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="PHh-Ju-hKX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -54,18 +58,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-b3-8Fi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-b3-8Fi">
                                 <rect key="frame" x="70" y="577" width="274" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="X8y-1x-qFV"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
                                 <connections>
                                     <action selector="loginButton:" destination="rdV-pr-Lr6" eventType="touchUpInside" id="dlQ-Ef-Vdt"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5U-Bq-DxC" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5U-Bq-DxC" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="70" y="488" width="274" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="J56-zx-QEH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -96,9 +104,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUf-zH-M2x">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUf-zH-M2x">
                                 <rect key="frame" x="70" y="755" width="274" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3ji-2k-MwT"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="계정이 없으십니까? 회원가입"/>
                                 <connections>
@@ -109,6 +119,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ffL-H5-kFg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffL-H5-kFg" firstAttribute="trailing" secondItem="vNp-b3-8Fi" secondAttribute="trailing" constant="70" id="2Qb-Zi-KW9"/>
+                            <constraint firstItem="vNp-b3-8Fi" firstAttribute="top" secondItem="r5U-Bq-DxC" secondAttribute="bottom" constant="55" id="6uL-q8-aFe"/>
+                            <constraint firstItem="JUf-zH-M2x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vNp-b3-8Fi" secondAttribute="bottom" constant="10" id="9Pt-eT-5gk"/>
+                            <constraint firstItem="UJ4-SE-dba" firstAttribute="top" secondItem="ffL-H5-kFg" secondAttribute="top" constant="34" id="FvO-yq-6hD"/>
+                            <constraint firstItem="ffL-H5-kFg" firstAttribute="trailing" secondItem="JUf-zH-M2x" secondAttribute="trailing" constant="70" id="GM8-EN-vVG"/>
+                            <constraint firstItem="r5U-Bq-DxC" firstAttribute="leading" secondItem="ffL-H5-kFg" secondAttribute="leading" constant="70" id="JDl-cK-UEG"/>
+                            <constraint firstItem="vNp-b3-8Fi" firstAttribute="leading" secondItem="ffL-H5-kFg" secondAttribute="leading" constant="70" id="KnZ-6b-duz"/>
+                            <constraint firstItem="ffL-H5-kFg" firstAttribute="trailing" secondItem="eLD-6f-Tw2" secondAttribute="trailing" constant="70" id="Mb8-UX-uvZ"/>
+                            <constraint firstItem="JUf-zH-M2x" firstAttribute="leading" secondItem="ffL-H5-kFg" secondAttribute="leading" constant="70" id="Oaf-1c-B9w"/>
+                            <constraint firstItem="r5U-Bq-DxC" firstAttribute="top" secondItem="eLD-6f-Tw2" secondAttribute="bottom" constant="30" id="Pf7-nH-swB"/>
+                            <constraint firstItem="ffL-H5-kFg" firstAttribute="bottom" secondItem="JUf-zH-M2x" secondAttribute="bottom" constant="76" id="YY6-na-i6C"/>
+                            <constraint firstItem="eLD-6f-Tw2" firstAttribute="top" secondItem="UJ4-SE-dba" secondAttribute="bottom" constant="50" id="gcN-2M-urU"/>
+                            <constraint firstItem="UJ4-SE-dba" firstAttribute="leading" secondItem="ffL-H5-kFg" secondAttribute="leading" constant="70" id="ste-UP-2hd"/>
+                            <constraint firstItem="eLD-6f-Tw2" firstAttribute="leading" secondItem="ffL-H5-kFg" secondAttribute="leading" constant="70" id="v68-Uf-2hm"/>
+                            <constraint firstItem="ffL-H5-kFg" firstAttribute="trailing" secondItem="r5U-Bq-DxC" secondAttribute="trailing" constant="70" id="x73-a5-PZT"/>
+                            <constraint firstItem="ffL-H5-kFg" firstAttribute="trailing" secondItem="UJ4-SE-dba" secondAttribute="trailing" constant="70" id="xGK-ny-UMo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MyGym" id="t6v-dB-DNG"/>
                     <connections>
@@ -120,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWl-Wj-Rht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="139"/>
+            <point key="canvasLocation" x="663.768115942029" y="138.61607142857142"/>
         </scene>
         <!--님, 환영합니다.-->
         <scene sceneID="IhX-Lw-kN8">
@@ -374,30 +402,33 @@
             <objects>
                 <viewController id="8Ox-mI-sAJ" customClass="RegisterGymViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fuf-Ec-dTJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cef-YS-CL6">
-                                <rect key="frame" x="0.0" y="140" width="414" height="776"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cef-YS-CL6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVm-Bf-v2T">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AeQ-6F-Sdm">
-                                                <rect key="frame" x="20" y="75" width="374" height="200"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AeQ-6F-Sdm">
+                                                <rect key="frame" x="20" y="69" width="374" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="0P6-5S-nW3"/>
+                                                </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="헬스장 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ef-6p-5Ge">
-                                                <rect key="frame" x="20" y="18" width="374" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="헬스장 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ef-6p-5Ge">
+                                                <rect key="frame" x="20" y="18" width="374" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-7x-PRf" userLabel="IDTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="69" y="333" width="276" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-7x-PRf" userLabel="IDTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                                <rect key="frame" x="69" y="324" width="276" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="kDU-Eq-8jn"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -422,9 +453,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GqS-uz-qMv" userLabel="PasswordTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="69" y="375" width="276" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GqS-uz-qMv" userLabel="PasswordTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                                <rect key="frame" x="69" y="394" width="276" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="wVg-Og-CKd"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -449,9 +482,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-x4-UHE" userLabel="PasswordCheckTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="69" y="417" width="276" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-x4-UHE" userLabel="PasswordCheckTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                                <rect key="frame" x="69" y="464" width="276" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="H7h-QD-DEL"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -476,16 +511,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uta-uh-UpB" userLabel="PassWord Confirm Label">
-                                                <rect key="frame" x="131" y="459" width="214" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-tH-cqv" userLabel="GymNameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="69" y="488" width="276" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-tH-cqv" userLabel="GymNameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                                <rect key="frame" x="69" y="554" width="276" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="xp4-IZ-6jG"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -510,9 +540,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qZO-hm-P2L" userLabel="LocationTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="69" y="530" width="276" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qZO-hm-P2L" userLabel="LocationTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                                <rect key="frame" x="69" y="624" width="276" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="SAT-Jl-Bfi"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -537,9 +569,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-Nd-jtn" userLabel="PhoneNumberTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="69" y="572" width="276" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-Nd-jtn" userLabel="PhoneNumberTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                                <rect key="frame" x="69" y="694" width="276" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="usd-lk-K14"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -564,21 +598,46 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gw-JG-Fc4" userLabel="RegisterButton">
-                                                <rect key="frame" x="69" y="712" width="276" height="56"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="회원가입">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="addButton:" destination="8Ox-mI-sAJ" eventType="touchUpInside" id="qgG-Cn-pzo"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uta-uh-UpB" userLabel="PassWord Confirm Label">
+                                                <rect key="frame" x="131" y="506" width="214" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="AMj-Zc-hp1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="800" id="apb-mV-Tva"/>
+                                            <constraint firstItem="AlX-x4-UHE" firstAttribute="top" secondItem="GqS-uz-qMv" secondAttribute="bottom" constant="36" id="0Ag-np-pkh"/>
+                                            <constraint firstAttribute="trailing" secondItem="AlX-x4-UHE" secondAttribute="trailing" constant="69" id="3Q1-Qm-AqV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ig1-Nd-jtn" secondAttribute="trailing" constant="69" id="72C-cy-Orm"/>
+                                            <constraint firstAttribute="trailing" secondItem="AeQ-6F-Sdm" secondAttribute="trailing" constant="20" symbolic="YES" id="9XE-Qd-Sa4"/>
+                                            <constraint firstItem="qZO-hm-P2L" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="69" id="GLl-pz-Lld"/>
+                                            <constraint firstItem="zkf-7x-PRf" firstAttribute="top" secondItem="AeQ-6F-Sdm" secondAttribute="bottom" constant="55" id="Ip0-dU-xQy"/>
+                                            <constraint firstAttribute="trailing" secondItem="GqS-uz-qMv" secondAttribute="trailing" constant="69" id="Kpa-I1-4TC"/>
+                                            <constraint firstItem="GqS-uz-qMv" firstAttribute="top" secondItem="zkf-7x-PRf" secondAttribute="bottom" constant="36" id="NDh-SF-CDn"/>
+                                            <constraint firstItem="Ig1-Nd-jtn" firstAttribute="top" secondItem="qZO-hm-P2L" secondAttribute="bottom" constant="36" id="UNX-QH-Saw"/>
+                                            <constraint firstItem="zkf-7x-PRf" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="69" id="WZL-Rc-wB1"/>
+                                            <constraint firstAttribute="height" constant="850" id="apb-mV-Tva"/>
+                                            <constraint firstItem="uta-uh-UpB" firstAttribute="top" secondItem="AlX-x4-UHE" secondAttribute="bottom" constant="8" symbolic="YES" id="bh9-ya-sMl"/>
+                                            <constraint firstAttribute="trailing" secondItem="uta-uh-UpB" secondAttribute="trailing" constant="69" id="c5N-ih-XwE"/>
+                                            <constraint firstAttribute="trailing" secondItem="zkf-7x-PRf" secondAttribute="trailing" constant="69" id="dTA-z8-MLk"/>
+                                            <constraint firstItem="Ig1-Nd-jtn" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="69" id="fUk-hg-XHf"/>
+                                            <constraint firstAttribute="trailing" secondItem="qZO-hm-P2L" secondAttribute="trailing" constant="69" id="j9r-oM-ZS7"/>
+                                            <constraint firstItem="qZO-hm-P2L" firstAttribute="top" secondItem="TwV-tH-cqv" secondAttribute="bottom" constant="36" id="m1A-6P-QYg"/>
+                                            <constraint firstItem="1Ef-6p-5Ge" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="20" symbolic="YES" id="ngd-EQ-R4w"/>
+                                            <constraint firstItem="uta-uh-UpB" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="131" id="nh7-dH-m4h"/>
+                                            <constraint firstItem="TwV-tH-cqv" firstAttribute="top" secondItem="uta-uh-UpB" secondAttribute="bottom" constant="27" id="ppe-Rq-yd0"/>
+                                            <constraint firstItem="AeQ-6F-Sdm" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="20" symbolic="YES" id="q11-Ts-EwV"/>
+                                            <constraint firstItem="TwV-tH-cqv" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="69" id="qDq-p6-bru"/>
+                                            <constraint firstItem="1Ef-6p-5Ge" firstAttribute="top" secondItem="IVm-Bf-v2T" secondAttribute="top" constant="18" id="qcB-a1-dmJ"/>
+                                            <constraint firstItem="AeQ-6F-Sdm" firstAttribute="top" secondItem="1Ef-6p-5Ge" secondAttribute="bottom" constant="21" id="sd6-7j-yRc"/>
+                                            <constraint firstItem="GqS-uz-qMv" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="69" id="uFI-OS-jm4"/>
+                                            <constraint firstAttribute="trailing" secondItem="TwV-tH-cqv" secondAttribute="trailing" constant="69" id="y1x-U6-JJ3"/>
+                                            <constraint firstItem="AlX-x4-UHE" firstAttribute="leading" secondItem="IVm-Bf-v2T" secondAttribute="leading" constant="69" id="yeY-vV-V6I"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ef-6p-5Ge" secondAttribute="trailing" constant="20" symbolic="YES" id="ygF-FT-HKe"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -592,18 +651,46 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="ijM-cT-zPb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="qAA-Y1-NGy"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94Q-pa-s2w">
+                                <rect key="frame" x="0.0" y="786" width="414" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gw-JG-Fc4" userLabel="RegisterButton">
+                                        <rect key="frame" x="48" y="0.0" width="318" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="42r-N8-xoK"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="회원가입">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addButton:" destination="8Ox-mI-sAJ" eventType="touchUpInside" id="qgG-Cn-pzo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Gw-JG-Fc4" secondAttribute="trailing" constant="48" id="VLQ-Eh-qon"/>
+                                    <constraint firstItem="3Gw-JG-Fc4" firstAttribute="leading" secondItem="94Q-pa-s2w" secondAttribute="leading" constant="48" id="oCO-dW-0uE"/>
+                                    <constraint firstItem="3Gw-JG-Fc4" firstAttribute="top" secondItem="94Q-pa-s2w" secondAttribute="top" id="oLx-ly-Uab"/>
+                                    <constraint firstAttribute="height" constant="110" id="zdv-lO-Emv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NGh-gI-3Np"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="94Q-pa-s2w" secondAttribute="bottom" id="7Li-fD-e00"/>
+                            <constraint firstItem="94Q-pa-s2w" firstAttribute="trailing" secondItem="NGh-gI-3Np" secondAttribute="trailing" id="HeU-hd-OkF"/>
                             <constraint firstItem="NGh-gI-3Np" firstAttribute="trailing" secondItem="cef-YS-CL6" secondAttribute="trailing" id="HxY-3Q-dpu"/>
+                            <constraint firstItem="94Q-pa-s2w" firstAttribute="leading" secondItem="NGh-gI-3Np" secondAttribute="leading" id="IXm-jI-5Ox"/>
                             <constraint firstItem="cef-YS-CL6" firstAttribute="leading" secondItem="NGh-gI-3Np" secondAttribute="leading" id="P3f-Iw-8eZ"/>
                             <constraint firstItem="cef-YS-CL6" firstAttribute="top" secondItem="NGh-gI-3Np" secondAttribute="top" id="QOJ-G5-AfP"/>
-                            <constraint firstItem="NGh-gI-3Np" firstAttribute="bottom" secondItem="cef-YS-CL6" secondAttribute="bottom" id="hve-al-FsW"/>
+                            <constraint firstAttribute="bottom" secondItem="cef-YS-CL6" secondAttribute="bottom" id="hve-al-FsW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="헬스장 등록" id="aqV-gS-qXz"/>
-                    <size key="freeformSize" width="414" height="950"/>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="emailTextField" destination="zkf-7x-PRf" id="Q2p-Rd-zuh"/>
                         <outlet property="gymImageView" destination="AeQ-6F-Sdm" id="lU9-Oq-DzW"/>
@@ -618,21 +705,6 @@
             </objects>
             <point key="canvasLocation" x="1131.8840579710145" y="1058.7053571428571"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="XvG-Mg-Sgv">
-            <objects>
-                <viewController id="2yL-wc-Ssl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UKX-0d-93o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="YSZ-Sm-J5p"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vZU-7Q-xuv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1775" y="857"/>
-        </scene>
         <!--Select Gym Info View Controller-->
         <scene sceneID="zkB-j0-IBd">
             <objects>
@@ -641,20 +713,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REA-5V-X1a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="REA-5V-X1a">
                                 <rect key="frame" x="0.0" y="137" width="414" height="383"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="383" id="S5d-Q6-8fM"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX헬스장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-yY-YZ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX헬스장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-yY-YZ9">
                                 <rect key="frame" x="20" y="528" width="374" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="CLY-mj-yQp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwi-gy-4w6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwi-gy-4w6">
                                 <rect key="frame" x="20" y="572" width="374" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sly-QW-Ny4" userLabel="address">
                                         <rect key="frame" x="8" y="8" width="358" height="30"/>
@@ -672,10 +747,15 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="xcJ-WE-SiL"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-sB-Rkd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-sB-Rkd">
                                 <rect key="frame" x="20" y="727" width="374" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="Cbl-eW-vTn"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="추가">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
@@ -687,6 +767,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8aI-E8-m87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="trailing" secondItem="8aI-E8-m87" secondAttribute="trailing" id="Aqb-jq-peR"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="top" secondItem="8aI-E8-m87" secondAttribute="top" constant="93" id="PlW-0A-za9"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="top" secondItem="REA-5V-X1a" secondAttribute="bottom" constant="8" symbolic="YES" id="aCz-0A-oPh"/>
+                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="9XI-yY-YZ9" secondAttribute="trailing" constant="20" id="c9H-cU-bXT"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="cE3-KU-k83"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" id="fgm-6k-YcO"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="kv2-Bh-btP"/>
+                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="b5V-sB-Rkd" secondAttribute="trailing" constant="20" id="ov8-Nr-cap"/>
+                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="lwi-gy-4w6" secondAttribute="trailing" constant="20" id="t9y-iq-ogO"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="top" secondItem="9XI-yY-YZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="wY4-Oo-buh"/>
+                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="wuN-BM-PAd"/>
+                            <constraint firstItem="8aI-E8-m87" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b5V-sB-Rkd" secondAttribute="bottom" constant="10" id="z0z-gZ-6jS"/>
+                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="bottom" constant="15" id="zqq-Ny-89x"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="healthClubLocation" destination="sly-QW-Ny4" id="ZEg-rg-zAj"/>
@@ -722,9 +817,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsQ-gA-dDA" userLabel="NameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsQ-gA-dDA" userLabel="NameTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="254" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="67b-kD-3XD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -749,9 +846,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-xZ-6X2" userLabel="EmailTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-xZ-6X2" userLabel="EmailTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="330" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="04k-5r-4Nx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -776,9 +875,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-2N-wbk" userLabel="passWordTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-2N-wbk" userLabel="passWordTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="392" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="tvT-Of-hls"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -803,9 +904,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pry-a6-xOk" userLabel="RegisterButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pry-a6-xOk" userLabel="RegisterButton">
                                 <rect key="frame" x="69" y="599" width="276" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="rjB-zo-tYR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="회원가입">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -814,9 +917,11 @@
                                     <action selector="registerButton:" destination="Cyd-D8-rTA" eventType="touchUpInside" id="DCG-nt-H3i"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-Fc-AdP" userLabel="ReturnTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-Fc-AdP" userLabel="ReturnTextField" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="69" y="450" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4H1-lH-cUd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -841,16 +946,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnh-Ux-Q7z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnh-Ux-Q7z">
                                 <rect key="frame" x="131" y="503" width="214" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Rg2-0G-2ij"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-6u-Muf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-6u-Muf">
                                 <rect key="frame" x="69" y="663" width="276" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="uPh-c6-hi9"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="헬스장 관리자이신가요?">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
@@ -862,6 +971,30 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O5j-sk-PVj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bMf-6u-Muf" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="69" id="0Co-tt-26t"/>
+                            <constraint firstItem="hsQ-gA-dDA" firstAttribute="top" secondItem="O5j-sk-PVj" secondAttribute="top" constant="114" id="2kD-I6-FLZ"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="iPx-xZ-6X2" secondAttribute="trailing" constant="69" id="4JU-pN-2WJ"/>
+                            <constraint firstItem="hsQ-gA-dDA" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="69" id="6De-Ei-0Yp"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="bMf-6u-Muf" secondAttribute="trailing" constant="69" id="6eb-TO-mf1"/>
+                            <constraint firstItem="Pry-a6-xOk" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="69" id="AHo-HH-QJC"/>
+                            <constraint firstItem="Jsv-Fc-AdP" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="69" id="EKb-Mc-4TF"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bMf-6u-Muf" secondAttribute="bottom" constant="10" id="Fmv-2i-Xve"/>
+                            <constraint firstItem="bMf-6u-Muf" firstAttribute="top" secondItem="Pry-a6-xOk" secondAttribute="bottom" constant="8" symbolic="YES" id="O91-eV-EGr"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="Jsv-Fc-AdP" secondAttribute="trailing" constant="69" id="R7Z-jS-Kpx"/>
+                            <constraint firstItem="Jsv-Fc-AdP" firstAttribute="top" secondItem="CGi-2N-wbk" secondAttribute="bottom" constant="24" id="Tqk-0t-WQO"/>
+                            <constraint firstItem="iPx-xZ-6X2" firstAttribute="top" secondItem="hsQ-gA-dDA" secondAttribute="bottom" constant="42" id="Z2f-CA-mCU"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="CGi-2N-wbk" secondAttribute="trailing" constant="69" id="ai7-R2-fpe"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="hsQ-gA-dDA" secondAttribute="trailing" constant="69" id="fHI-n9-Ugl"/>
+                            <constraint firstItem="CGi-2N-wbk" firstAttribute="top" secondItem="iPx-xZ-6X2" secondAttribute="bottom" constant="28" id="fd6-ew-EBj"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="pnh-Ux-Q7z" secondAttribute="trailing" constant="69" id="g4p-Rn-PVI"/>
+                            <constraint firstItem="O5j-sk-PVj" firstAttribute="trailing" secondItem="Pry-a6-xOk" secondAttribute="trailing" constant="69" id="m3C-po-CDj"/>
+                            <constraint firstItem="pnh-Ux-Q7z" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="131" id="rB8-nX-Ujt"/>
+                            <constraint firstItem="pnh-Ux-Q7z" firstAttribute="top" secondItem="Jsv-Fc-AdP" secondAttribute="bottom" constant="19" id="ttU-1E-r1G"/>
+                            <constraint firstItem="CGi-2N-wbk" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="69" id="uxB-Gg-UMa"/>
+                            <constraint firstItem="iPx-xZ-6X2" firstAttribute="leading" secondItem="O5j-sk-PVj" secondAttribute="leading" constant="69" id="xDi-km-eja"/>
+                            <constraint firstItem="Pry-a6-xOk" firstAttribute="top" secondItem="pnh-Ux-Q7z" secondAttribute="bottom" constant="75" id="yfZ-iK-TaA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="10z-4o-laT"/>
                     <connections>
