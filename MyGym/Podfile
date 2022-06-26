@@ -18,6 +18,8 @@ pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'FirebaseDatabase'
+pod 'FSCalendar'
+pod 'Firebase/Storage'
 
 
   target 'MyGymTests' do
