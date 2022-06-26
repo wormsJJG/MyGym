@@ -33,8 +33,9 @@ class UserHealthClubData{
 class Trainer {
     var uid: String = "" // primary key
     var name: String = ""
+    var phoneNumber: String = ""
     var ptDate: [PtDate] = []
-    var workPlace: HealthClub = HealthClub()
+    var healthClubUid: String = ""
 }
 class PtDate{
     var date: Date = Date()

@@ -116,7 +116,22 @@ class FirebaseFunction{
                     viewController.userListTableView.reloadData()
             }
         })
-
+    }
+    func getTrainerList(_ healthClubUid: String,_ viewController: TrainerListViewController){
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            for child in snapshot.children{
+                let dataSnapshot = child as? DataSnapshot
+                let item = dataSnapshot?.value as? NSDictionary
+                if(item?["type"] as? String == "Trainer" && item?["healthClubUid"] as? String == healthClubUid){
+                    let trainer = Trainer()
+                    trainer.name = item?["name"] as? String ?? "nil"
+                    trainer.phoneNumber = item?["phoneNumber"] as? String ?? "nil"
+                    trainer.uid = dataSnapshot?.key ?? "nil"
+                    viewController.trainerList.append(trainer)
+                }
+                    viewController.trainerListCollectionView.reloadData()
+            }
+        })
     }
     //check
     func check(_ viewController: UIViewController,_ uid: String){

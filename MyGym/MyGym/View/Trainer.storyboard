@@ -28,7 +28,7 @@
         <!--트레이너 페이지-->
         <scene sceneID="E4J-Y0-i9S">
             <objects>
-                <viewController storyboardIdentifier="main" id="dnh-O6-pNk" customClass="TrainerMainViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="dnh-O6-pNk" customClass="TrainerListViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jec-Ig-qjh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0do-PD-d5d" customClass="TMenuListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0do-PD-d5d" customClass="TrainerListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
                                         <rect key="frame" x="27" y="8" width="360" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zBJ-MW-Kn9">
@@ -72,9 +72,6 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="360" height="130"/>
-                                        <connections>
-                                            <outlet property="menuTitleLabel" destination="2H5-2K-hT8" id="xNx-dj-AM8"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -93,9 +90,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="트레이너 페이지" id="6zq-jT-zSp"/>
-                    <connections>
-                        <outlet property="menuListCollectionView" destination="QpG-H6-iCi" id="Ncj-vo-NQ8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cq-3k-4aV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

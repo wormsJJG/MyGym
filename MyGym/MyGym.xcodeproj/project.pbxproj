@@ -29,6 +29,8 @@
 		358A85DE285B595F00D6D7B0 /* FirebaseFuntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A85DC285B595F00D6D7B0 /* FirebaseFuntion.swift */; };
 		358A85E0285B599100D6D7B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A85DF285B599100D6D7B0 /* Model.swift */; };
 		358A85E7285B5AD400D6D7B0 /* MyPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A85E6285B5AD400D6D7B0 /* MyPageCollectionViewCell.swift */; };
+		359FA2E428685208006416AF /* TrainerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FA2E328685208006416AF /* TrainerListViewController.swift */; };
+		359FA2E628685219006416AF /* TrainerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FA2E528685219006416AF /* TrainerListCollectionViewCell.swift */; };
 		35D2E80C285F2E000014A544 /* gymListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D2E80B285F2E000014A544 /* gymListCollectionViewCell.swift */; };
 		35D2E80E285F38EB0014A544 /* selectGymInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D2E80D285F38EB0014A544 /* selectGymInfoViewController.swift */; };
 		35D2E810285F55CA0014A544 /* HealthClub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D2E80F285F55CA0014A544 /* HealthClub.storyboard */; };
@@ -90,6 +92,8 @@
 		358A85DC285B595F00D6D7B0 /* FirebaseFuntion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseFuntion.swift; sourceTree = "<group>"; };
 		358A85DF285B599100D6D7B0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		358A85E6285B5AD400D6D7B0 /* MyPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		359FA2E328685208006416AF /* TrainerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListViewController.swift; sourceTree = "<group>"; };
+		359FA2E528685219006416AF /* TrainerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListCollectionViewCell.swift; sourceTree = "<group>"; };
 		35D2E80B285F2E000014A544 /* gymListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gymListCollectionViewCell.swift; sourceTree = "<group>"; };
 		35D2E80D285F38EB0014A544 /* selectGymInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectGymInfoViewController.swift; sourceTree = "<group>"; };
 		35D2E80F285F55CA0014A544 /* HealthClub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HealthClub.storyboard; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			children = (
 				356203662860A41B00DA3072 /* UserListTableViewCell.swift */,
 				352DCE92286348AA0069C5BD /* MenuListCollectionViewCell.swift */,
+				359FA2E528685219006416AF /* TrainerListCollectionViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				356203652860A40900DA3072 /* cell */,
 				35D2E816285F5B220014A544 /* MainViewController.swift */,
 				356203622860958200DA3072 /* UserListViewController.swift */,
+				359FA2E328685208006416AF /* TrainerListViewController.swift */,
 			);
 			path = HealthClubView;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359FA2E428685208006416AF /* TrainerListViewController.swift in Sources */,
 				26410CF72855B37900797104 /* GymSelectViewController.swift in Sources */,
 				356203672860A41B00DA3072 /* UserListTableViewCell.swift in Sources */,
 				26749A632852360300FAD08E /* MyPageViewController.swift in Sources */,
@@ -592,6 +599,7 @@
 				358A85E0285B599100D6D7B0 /* Model.swift in Sources */,
 				35D2E80E285F38EB0014A544 /* selectGymInfoViewController.swift in Sources */,
 				35D2E817285F5B220014A544 /* MainViewController.swift in Sources */,
+				359FA2E628685219006416AF /* TrainerListCollectionViewCell.swift in Sources */,
 				356A3CE0284F7F1B002E7AD4 /* AppDelegate.swift in Sources */,
 				356A3CE2284F7F1B002E7AD4 /* SceneDelegate.swift in Sources */,
 				358A85DD285B595F00D6D7B0 /* SimpleAlert.swift in Sources */,

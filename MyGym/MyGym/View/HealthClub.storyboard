@@ -170,6 +170,110 @@
             </objects>
             <point key="canvasLocation" x="-1254" y="-350"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OCe-LK-E8A">
+            <objects>
+                <navigationController id="4GS-e3-T9E" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0iq-nR-tCI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vUW-kb-bHh" kind="relationship" relationship="rootViewController" id="Wjv-nd-xCf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qE3-1u-mvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="-1041"/>
+        </scene>
+        <!--트레이너 목록/관리-->
+        <scene sceneID="P7o-Zm-ivV">
+            <objects>
+                <viewController storyboardIdentifier="trainerListVC" id="vUW-kb-bHh" customClass="TrainerListViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="67Z-Fs-xAq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hec-fP-ikr">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="y20-Uo-YkW">
+                                    <size key="itemSize" width="360" height="73"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="o3P-bc-Vdq" customClass="TrainerListCollectionViewCell" customModule="MyGym" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="8" width="360" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R3V-tA-FDJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="73"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="트레이너" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frv-e5-4b9">
+                                                    <rect key="frame" x="8" y="8" width="344" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="Utm-Qz-GN5"/>
+                                                        <constraint firstAttribute="width" constant="344" id="ivv-OK-JxU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="트레이너" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvb-0m-btd">
+                                                    <rect key="frame" x="8" y="48" width="344" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="344" id="9XD-RX-alh"/>
+                                                        <constraint firstAttribute="height" constant="17" id="aMg-11-yPG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                            <constraints>
+                                                <constraint firstItem="rvb-0m-btd" firstAttribute="top" secondItem="Frv-e5-4b9" secondAttribute="bottom" constant="6" id="4Sm-eS-KV6"/>
+                                                <constraint firstAttribute="trailing" secondItem="rvb-0m-btd" secondAttribute="trailing" constant="8" id="A7M-pd-hfm"/>
+                                                <constraint firstItem="Frv-e5-4b9" firstAttribute="top" secondItem="R3V-tA-FDJ" secondAttribute="top" constant="8" id="E9Q-2G-HsC"/>
+                                                <constraint firstAttribute="bottom" secondItem="rvb-0m-btd" secondAttribute="bottom" constant="8" id="IiT-ta-gUn"/>
+                                                <constraint firstAttribute="trailing" secondItem="Frv-e5-4b9" secondAttribute="trailing" constant="8" id="bZM-mX-cuy"/>
+                                                <constraint firstItem="Frv-e5-4b9" firstAttribute="leading" secondItem="R3V-tA-FDJ" secondAttribute="leading" constant="8" id="iTb-eq-A26"/>
+                                                <constraint firstItem="rvb-0m-btd" firstAttribute="leading" secondItem="R3V-tA-FDJ" secondAttribute="leading" constant="8" id="ncc-vq-DdB"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="360" height="73"/>
+                                        <connections>
+                                            <outlet property="trainerName" destination="Frv-e5-4b9" id="4RU-vH-dZb"/>
+                                            <outlet property="trainerPhoneNumber" destination="rvb-0m-btd" id="my6-uZ-xJK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vUW-kb-bHh" id="4Wu-YZ-oG8"/>
+                                    <outlet property="delegate" destination="vUW-kb-bHh" id="1eA-FS-OXO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mrB-Ii-zf8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hec-fP-ikr" firstAttribute="bottom" secondItem="mrB-Ii-zf8" secondAttribute="bottom" id="Hjh-aI-EH2"/>
+                            <constraint firstAttribute="trailing" secondItem="hec-fP-ikr" secondAttribute="trailing" id="jan-Fe-xrL"/>
+                            <constraint firstItem="hec-fP-ikr" firstAttribute="top" secondItem="mrB-Ii-zf8" secondAttribute="top" constant="44" id="zSv-gR-x6b"/>
+                            <constraint firstItem="hec-fP-ikr" firstAttribute="leading" secondItem="67Z-Fs-xAq" secondAttribute="leading" id="zb1-eI-mua"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="트레이너 목록/관리" id="yid-Rq-P9c"/>
+                    <connections>
+                        <outlet property="trainerListCollectionView" destination="hec-fP-ikr" id="ljS-IT-YP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nii-Cp-dxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711.59420289855075" y="-1042.6339285714284"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -32,12 +32,16 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "HealthClub", bundle: nil)
         switch indexPath.item{
         case 0 :
-            let storyboard = UIStoryboard(name: "HealthClub", bundle: nil)
             let userListVC = storyboard.instantiateViewController(withIdentifier: "userListVC") as! UserListViewController
             userListVC.uid = self.uid
             navigationController?.pushViewController(userListVC, animated: true)
+        case 1 :
+            let trainerListVC = storyboard.instantiateViewController(withIdentifier: "trainerListVC") as! TrainerListViewController
+            trainerListVC.healthClubUid = self.uid
+            navigationController?.pushViewController(trainerListVC, animated: true)
         default :
             print("Error")
         }
