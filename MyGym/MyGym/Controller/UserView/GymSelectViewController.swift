@@ -38,15 +38,18 @@ extension GymSelectViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.backgroundColor = .red
         cell.layer.cornerRadius = 12.0
         if searchCount > 0 {
-            let url = URL(string: filterData[indexPath.item].profileImageUrl)
-            do{
-                let data = try Data(contentsOf: url!)
-                cell.gymImage.image = UIImage(data: data)
-            } catch{
-                
+            if(filterData[indexPath.item].profileImageUrl != "nil"){
+                let url = URL(string: filterData[indexPath.item].profileImageUrl)
+                do{
+                    let data = try Data(contentsOf: url!)
+                    cell.gymImage.image = UIImage(data: data)
+                } catch{
+                    
+                }
             }
             cell.gymTitleLabel.text = filterData[indexPath.item].name
         }else{
+            if(healthClubList[indexPath.item].profileImageUrl != "nil"){
             let url = URL(string: healthClubList[indexPath.item].profileImageUrl)
             do{
                 let data = try Data(contentsOf: url!)
@@ -54,6 +57,7 @@ extension GymSelectViewController: UICollectionViewDelegate, UICollectionViewDat
             } catch{
                 
             }
+        }
             cell.gymTitleLabel.text = healthClubList[indexPath.item].name
         }
         return cell
