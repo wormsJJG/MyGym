@@ -175,7 +175,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="346" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-99-YLh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-99-YLh">
                                                     <rect key="frame" x="8" y="52" width="330" height="240"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="240" id="EQS-on-Oy3"/>
@@ -320,7 +320,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="272"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-do-xz5">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-do-xz5">
                                                     <rect key="frame" x="8" y="8" width="334" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="334" id="cVl-uL-7G8"/>
@@ -705,7 +705,23 @@
             </objects>
             <point key="canvasLocation" x="1131.8840579710145" y="1058.7053571428571"/>
         </scene>
-        <!--Select Gym Info View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="1Ad-it-B5f">
+            <objects>
+                <navigationController id="ZsZ-Rh-stJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="X21-zX-Vl4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M0f-5e-3ps" kind="relationship" relationship="rootViewController" id="7v3-q6-PWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af1-e1-xNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3471" y="-1567"/>
+        </scene>
+        <!--추가하기-->
         <scene sceneID="zkB-j0-IBd">
             <objects>
                 <viewController storyboardIdentifier="selectHCVC" id="M0f-5e-3ps" customClass="selectGymInfoViewController" customModule="MyGym" customModuleProvider="target" sceneMemberID="viewController">
@@ -713,34 +729,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="REA-5V-X1a">
-                                <rect key="frame" x="0.0" y="137" width="414" height="383"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="383" id="S5d-Q6-8fM"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REA-5V-X1a">
+                                <rect key="frame" x="0.0" y="140" width="414" height="380"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX헬스장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-yY-YZ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="XX헬스장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-yY-YZ9">
                                 <rect key="frame" x="20" y="528" width="374" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="CLY-mj-yQp"/>
+                                    <constraint firstAttribute="height" constant="36" id="kva-zI-kRM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwi-gy-4w6">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwi-gy-4w6">
                                 <rect key="frame" x="20" y="572" width="374" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sly-QW-Ny4" userLabel="address">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="주소 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sly-QW-Ny4" userLabel="address">
                                         <rect key="frame" x="8" y="8" width="358" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전화번호 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-tU-CvX" userLabel="address">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="전화번호 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-tU-CvX" userLabel="address">
                                         <rect key="frame" x="8" y="102" width="358" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="d0H-yj-Lh4"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -748,13 +762,19 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="xcJ-WE-SiL"/>
+                                    <constraint firstItem="VPy-tU-CvX" firstAttribute="top" secondItem="sly-QW-Ny4" secondAttribute="bottom" constant="64" id="0Dg-ie-Lgi"/>
+                                    <constraint firstItem="sly-QW-Ny4" firstAttribute="trailing" secondItem="VPy-tU-CvX" secondAttribute="trailing" id="1ov-7G-sme"/>
+                                    <constraint firstItem="sly-QW-Ny4" firstAttribute="leading" secondItem="VPy-tU-CvX" secondAttribute="leading" id="7bt-Lt-FsY"/>
+                                    <constraint firstItem="VPy-tU-CvX" firstAttribute="bottom" secondItem="lwi-gy-4w6" secondAttribute="bottomMargin" id="X1V-7U-Q5Z"/>
+                                    <constraint firstItem="sly-QW-Ny4" firstAttribute="trailing" secondItem="lwi-gy-4w6" secondAttribute="trailingMargin" id="bNT-0E-oju"/>
+                                    <constraint firstItem="sly-QW-Ny4" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="topMargin" id="hiG-tF-YAp"/>
+                                    <constraint firstItem="sly-QW-Ny4" firstAttribute="leading" secondItem="lwi-gy-4w6" secondAttribute="leadingMargin" id="vZo-6o-CgO"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-sB-Rkd">
                                 <rect key="frame" x="20" y="727" width="374" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="Cbl-eW-vTn"/>
+                                    <constraint firstAttribute="height" constant="98" id="kyi-8v-E2c"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="추가">
@@ -768,22 +788,24 @@
                         <viewLayoutGuide key="safeArea" id="8aI-E8-m87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="REA-5V-X1a" firstAttribute="trailing" secondItem="8aI-E8-m87" secondAttribute="trailing" id="Aqb-jq-peR"/>
-                            <constraint firstItem="REA-5V-X1a" firstAttribute="top" secondItem="8aI-E8-m87" secondAttribute="top" constant="93" id="PlW-0A-za9"/>
-                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="top" secondItem="REA-5V-X1a" secondAttribute="bottom" constant="8" symbolic="YES" id="aCz-0A-oPh"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="9XI-yY-YZ9" secondAttribute="trailing" constant="20" id="c9H-cU-bXT"/>
-                            <constraint firstItem="lwi-gy-4w6" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="cE3-KU-k83"/>
-                            <constraint firstItem="REA-5V-X1a" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" id="fgm-6k-YcO"/>
-                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="kv2-Bh-btP"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="b5V-sB-Rkd" secondAttribute="trailing" constant="20" id="ov8-Nr-cap"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="lwi-gy-4w6" secondAttribute="trailing" constant="20" id="t9y-iq-ogO"/>
-                            <constraint firstItem="lwi-gy-4w6" firstAttribute="top" secondItem="9XI-yY-YZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="wY4-Oo-buh"/>
-                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="wuN-BM-PAd"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b5V-sB-Rkd" secondAttribute="bottom" constant="10" id="z0z-gZ-6jS"/>
-                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="bottom" constant="15" id="zqq-Ny-89x"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="top" secondItem="8aI-E8-m87" secondAttribute="top" id="1h1-28-QdW"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="top" secondItem="9XI-yY-YZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="BTF-JE-Xd2"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="QU5-nl-EE3" secondAttribute="leadingMargin" id="Gri-0N-pcs"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="top" secondItem="REA-5V-X1a" secondAttribute="bottom" constant="8" symbolic="YES" id="O6E-mi-gRh"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="leading" secondItem="QU5-nl-EE3" secondAttribute="leading" id="Zxb-X0-bCz"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="lwi-gy-4w6" secondAttribute="leading" id="aZC-J9-s5a"/>
+                            <constraint firstItem="8aI-E8-m87" firstAttribute="bottom" secondItem="b5V-sB-Rkd" secondAttribute="bottom" constant="37" id="dxr-Pd-SK5"/>
+                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="bottom" constant="15" id="enO-Y9-r1v"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="trailing" secondItem="lwi-gy-4w6" secondAttribute="trailing" id="ffE-za-a7R"/>
+                            <constraint firstAttribute="trailing" secondItem="REA-5V-X1a" secondAttribute="trailing" id="i9g-lV-NKs"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="trailing" secondItem="b5V-sB-Rkd" secondAttribute="trailing" id="kh2-xl-af2"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="centerX" secondItem="9XI-yY-YZ9" secondAttribute="centerX" id="mfN-Jj-LYL"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="leading" secondItem="b5V-sB-Rkd" secondAttribute="leading" id="t56-66-be0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="추가하기" id="lJ8-mG-CUd"/>
                     <connections>
+                        <outlet property="healthClubImage" destination="REA-5V-X1a" id="y66-42-fIy"/>
                         <outlet property="healthClubLocation" destination="sly-QW-Ny4" id="ZEg-rg-zAj"/>
                         <outlet property="healthClubPhoneNumber" destination="VPy-tU-CvX" id="1ZO-HC-khW"/>
                         <outlet property="healthClubTitle" destination="9XI-yY-YZ9" id="MLL-kZ-bih"/>
@@ -791,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFj-mQ-AlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3466.666666666667" y="-950.22321428571422"/>
+            <point key="canvasLocation" x="3471.0144927536235" y="-888.61607142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bYb-b7-g18">
