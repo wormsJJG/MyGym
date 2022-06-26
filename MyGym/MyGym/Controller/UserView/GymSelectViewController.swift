@@ -33,7 +33,6 @@ extension GymSelectViewController: UICollectionViewDelegate, UICollectionViewDat
             return healthClubList.count
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = gymListCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! gymListCollectionViewCell
         cell.backgroundColor = .red

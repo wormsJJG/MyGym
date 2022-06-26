@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import PhotosUI
 import UIKit
 class FirebaseFunction{
     var ref = Database.database().reference().child("users")
@@ -59,9 +60,11 @@ class FirebaseFunction{
     }
 
     //헬스장 계정 회원가입 함수
-    func registerGym(_ email: String,_ password: String,_ name: String,_ phoneNumber: String,_ location: String,_ viewController: UIViewController){
+    func registerGym(_ email: String,_ password: String,_ name: String,_ phoneNumber: String,_ location: String,_ viewController: UIViewController,_ imageView: UIImageView){
         Auth.auth().createUser(withEmail: email, password: password){ (HealthClub, err) in
                     if HealthClub != nil{
+                        let image = imageView.image?.jpegData(compressionQuality: 0.1)
+                        Storage
                         self.ref.child((HealthClub?.user.uid)!).setValue(["name": name, "phoneNumber": phoneNumber, "location": location, "type": "HealthClub"])
                         //pop 2번
                         let viewControllers : [UIViewController] = viewController.navigationController!.viewControllers as [UIViewController]
