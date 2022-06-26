@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-A9-KH2">
-                                <rect key="frame" x="0.0" y="118" width="414" height="695"/>
+                                <rect key="frame" x="0.0" y="162" width="414" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Frd-Dx-biv">
                                     <size key="itemSize" width="346" height="300"/>
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0V-lb-0eY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="-568"/>
+            <point key="canvasLocation" x="2077" y="-639"/>
         </scene>
         <!--회원 정보-->
         <scene sceneID="VGJ-Oo-j4Z">
@@ -891,10 +891,11 @@
             </objects>
             <point key="canvasLocation" x="-1058" y="-1651"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="NA5-LH-6yQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJO-W2-uiU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Uuf-1U-VhB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6f2-9d-Nlb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -907,7 +908,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYd-u0-uak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="-1351"/>
+            <point key="canvasLocation" x="1133" y="-662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AZZ-Ew-1Dv">
@@ -937,18 +938,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="i4l-h4-4QC" kind="relationship" relationship="viewControllers" id="cmb-xE-wDd"/>
                         <segue destination="OOE-M0-wEY" kind="relationship" relationship="viewControllers" id="iGN-uW-2bx"/>
+                        <segue destination="QJO-W2-uiU" kind="relationship" relationship="viewControllers" id="OiI-hb-n42"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uz-YE-X9q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="-244"/>
+            <point key="canvasLocation" x="284" y="-640"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="cmb-xE-wDd"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
