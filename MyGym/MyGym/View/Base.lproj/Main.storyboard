@@ -299,10 +299,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MGJ-EE-lu6">
-                                <rect key="frame" x="0.0" y="161" width="414" height="701"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="701" id="6Di-Dr-ONR"/>
+                                    <constraint firstAttribute="height" constant="730" id="6Di-Dr-ONR"/>
                                     <constraint firstAttribute="width" constant="414" id="8XZ-cY-hny"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="701" id="mJX-VO-iKG"/>
                                 </constraints>
@@ -381,7 +381,7 @@
                             <constraint firstAttribute="trailing" secondItem="MGJ-EE-lu6" secondAttribute="trailing" id="OBv-JH-VdX"/>
                             <constraint firstItem="jtP-Bg-clm" firstAttribute="leading" secondItem="MGJ-EE-lu6" secondAttribute="leading" id="XcF-L2-92h"/>
                             <constraint firstItem="jtP-Bg-clm" firstAttribute="trailing" secondItem="MGJ-EE-lu6" secondAttribute="trailing" id="Yfv-xr-uvC"/>
-                            <constraint firstItem="MGJ-EE-lu6" firstAttribute="top" secondItem="jtP-Bg-clm" secondAttribute="bottom" constant="29" id="dI7-1U-6sa"/>
+                            <constraint firstItem="MGJ-EE-lu6" firstAttribute="top" secondItem="jtP-Bg-clm" secondAttribute="bottom" id="dI7-1U-6sa"/>
                             <constraint firstItem="MGJ-EE-lu6" firstAttribute="bottom" secondItem="BBg-Bf-eNn" secondAttribute="bottom" id="gB3-7z-CkM"/>
                             <constraint firstItem="jtP-Bg-clm" firstAttribute="top" secondItem="BBg-Bf-eNn" secondAttribute="top" id="qLU-cJ-xNE"/>
                             <constraint firstItem="MGJ-EE-lu6" firstAttribute="leading" secondItem="Wk7-Jr-6hl" secondAttribute="leading" id="xWa-Yb-nBf"/>

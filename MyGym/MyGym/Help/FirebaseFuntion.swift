@@ -53,7 +53,6 @@ class FirebaseFunction{
                     healthClub.phoneNumber = item?["phoneNumber"] as! String
                     healthClub.location = item?["location"] as! String
                     healthClub.type = item?["type"] as! String
-                    print("asdasd\(item?["profileImageUrl"] as? String ?? "nil")")
                     healthClub.profileImageUrl = item?["profileImageUrl"] as? String ?? "nil"
                     viewController.healthClubList.append(healthClub)
                 }

@@ -221,7 +221,6 @@
 				35D2E815285F5B030014A544 /* UserView */,
 				35D2E814285F5AF00014A544 /* HealthClubView */,
 				35D2E811285F58CC0014A544 /* Check */,
-				358A85E3285B59ED00D6D7B0 /* cell */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +290,7 @@
 		35D2E815285F5B030014A544 /* UserView */ = {
 			isa = PBXGroup;
 			children = (
+				358A85E3285B59ED00D6D7B0 /* cell */,
 				356A3D13284F80F1002E7AD4 /* LoginViewController.swift */,
 				261658452850319900279D52 /* RegisterUserViewController.swift */,
 				26749A622852360300FAD08E /* MyPageViewController.swift */,
