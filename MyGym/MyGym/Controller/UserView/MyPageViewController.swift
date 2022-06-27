@@ -10,8 +10,6 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class MyPageViewController: UIViewController {
-//    @IBOutlet weak var accountView: UIView!
-//    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var healthClubView: UICollectionView!
     var userUid: String = ""
     var userName: String = ""
@@ -29,14 +27,7 @@ class MyPageViewController: UIViewController {
         healthClubView.delegate = self
         healthClubView.dataSource = self
         navigationItem.hidesBackButton = true
-//        UIStyle()
     }
-//    func UIStyle(){
-//        accountView.layer.cornerRadius = 30
-//        btn.clipsToBounds = true
-//        btn.layer.cornerRadius = 30
-//        btn.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-//    }
 
     @IBAction func dddddd(_ sender: Any) {
         

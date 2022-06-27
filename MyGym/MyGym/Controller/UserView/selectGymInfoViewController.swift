@@ -12,7 +12,7 @@ class selectGymInfoViewController: UIViewController {
     
     @IBOutlet weak var healthClubImage: UIImageView!
     @IBOutlet weak var healthClubTitle: UILabel!
-    @IBOutlet weak var healthClubLocation: UILabel!
+    @IBOutlet weak var healthClubLocation: UITextView!
     @IBOutlet weak var healthClubPhoneNumber: UILabel!
 
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class selectGymInfoViewController: UIViewController {
         }
         healthClubTitle.text = selectHealthClub.name
         healthClubLocation.text = "주소: \(selectHealthClub.location)"
-        healthClubPhoneNumber.text = "주소: \(selectHealthClub.phoneNumber)"
+        healthClubPhoneNumber.text = "전화번호: \(selectHealthClub.phoneNumber)"
     }
     @IBAction func addButtonClick(_ sender: Any) {
     }

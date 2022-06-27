@@ -11,7 +11,7 @@ import FirebaseDatabase
 class AccountInfoViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    
+    var userUid: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
     }
