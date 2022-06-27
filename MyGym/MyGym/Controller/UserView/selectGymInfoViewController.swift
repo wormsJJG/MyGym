@@ -10,6 +10,7 @@ import UIKit
 class selectGymInfoViewController: UIViewController {
     var selectHealthClub: HealthClub!
     
+    @IBOutlet weak var healthClubImage: UIImageView!
     @IBOutlet weak var healthClubTitle: UILabel!
     @IBOutlet weak var healthClubLocation: UITextView!
     @IBOutlet weak var healthClubPhoneNumber: UILabel!
@@ -22,6 +23,15 @@ class selectGymInfoViewController: UIViewController {
         setSelectHealthInfo()
     }
     fileprivate func setSelectHealthInfo(){
+        if(selectHealthClub.profileImageUrl != "nil"){
+            let url = URL(string: selectHealthClub.profileImageUrl)
+            do{
+                let data = try Data(contentsOf: url!)
+                healthClubImage.image = UIImage(data: data)
+            } catch{
+                
+            }
+        }
         healthClubTitle.text = selectHealthClub.name
         healthClubLocation.text = "주소: \(selectHealthClub.location)"
         healthClubPhoneNumber.text = "전화번호: \(selectHealthClub.phoneNumber)"
