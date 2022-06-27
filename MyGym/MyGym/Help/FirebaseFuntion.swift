@@ -156,9 +156,9 @@ class FirebaseFunction{
                 viewController.navigationController?.pushViewController(main, animated: true)
             }else if(type=="User"){
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let myPageVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! MyPageViewController
-                myPageVC.userUid = uid
-                viewController.navigationController?.pushViewController(myPageVC, animated: true)
+                let userMenuVC = storyboard.instantiateViewController(withIdentifier: "UserMenuVC") as! UserMenuViewController
+                userMenuVC.userUid = uid
+                viewController.navigationController?.pushViewController(userMenuVC, animated: true)
             }else{
                 let storyboard = UIStoryboard(name: "Trainer", bundle: nil)
                 let trainerMainVC = storyboard.instantiateViewController(withIdentifier: "main") as! TrainerMainViewController
