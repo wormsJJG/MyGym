@@ -155,7 +155,7 @@ class FirebaseFunction{
                 viewController.navigationController?.pushViewController(main, animated: true)
             }else if(type=="User"){
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let userMenuVC = storyboard.instantiateViewController(withIdentifier: "UserMenuVC") as! UserMenuViewController
+                let userMenuVC = storyboard.instantiateViewController(withIdentifier: "main") as! MyPageViewController
                 userMenuVC.userUid = uid
                 viewController.navigationController?.pushViewController(userMenuVC, animated: true)
             }else{
