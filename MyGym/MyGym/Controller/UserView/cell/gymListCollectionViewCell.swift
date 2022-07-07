@@ -8,7 +8,6 @@
 import UIKit
 
 class gymListCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var gymTitleLabel: UILabel!
     @IBOutlet weak var gymImage: UIImageView!
     

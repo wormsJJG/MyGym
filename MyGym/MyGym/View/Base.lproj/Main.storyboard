@@ -777,17 +777,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="REA-5V-X1a">
-                                <rect key="frame" x="0.0" y="94" width="414" height="383"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="REA-5V-X1a">
+                                <rect key="frame" x="0.0" y="140" width="414" height="337"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="383" id="k4H-GD-eET"/>
+                                    <constraint firstAttribute="height" constant="337" id="kIv-BM-kbj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX헬스장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-yY-YZ9">
                                 <rect key="frame" x="20" y="485" width="374" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="DSo-ir-dIT"/>
+                                    <constraint firstAttribute="height" constant="36" id="gfs-IO-scL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -799,7 +799,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-tU-CvX" userLabel="address">
                                         <rect key="frame" x="0.0" y="102" width="374" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="Jhe-4D-4ac"/>
+                                            <constraint firstAttribute="height" constant="38" id="iw5-h3-3Yi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -807,9 +807,6 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="주소 :" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p2q-L5-SNp">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="94"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="94" id="gjs-eu-g0s"/>
-                                        </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -817,20 +814,19 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
-                                    <constraint firstItem="p2q-L5-SNp" firstAttribute="leading" secondItem="lwi-gy-4w6" secondAttribute="leading" id="67q-1m-JBN"/>
-                                    <constraint firstAttribute="height" constant="140" id="7NQ-bW-c0A"/>
-                                    <constraint firstItem="p2q-L5-SNp" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="top" id="Aci-Mz-hJz"/>
-                                    <constraint firstItem="VPy-tU-CvX" firstAttribute="leading" secondItem="lwi-gy-4w6" secondAttribute="leading" id="C5P-VG-AB9"/>
-                                    <constraint firstAttribute="trailing" secondItem="VPy-tU-CvX" secondAttribute="trailing" id="D5Q-Dv-PP9"/>
-                                    <constraint firstItem="VPy-tU-CvX" firstAttribute="top" secondItem="p2q-L5-SNp" secondAttribute="bottom" constant="8" symbolic="YES" id="RNY-8y-oHr"/>
-                                    <constraint firstAttribute="bottom" secondItem="VPy-tU-CvX" secondAttribute="bottom" id="Zw1-ha-QHS"/>
-                                    <constraint firstAttribute="trailing" secondItem="p2q-L5-SNp" secondAttribute="trailing" id="gAU-X1-ADA"/>
+                                    <constraint firstItem="p2q-L5-SNp" firstAttribute="leading" secondItem="VPy-tU-CvX" secondAttribute="leading" id="MjF-5j-3BB"/>
+                                    <constraint firstAttribute="trailing" secondItem="p2q-L5-SNp" secondAttribute="trailing" id="Q94-xz-K3m"/>
+                                    <constraint firstItem="p2q-L5-SNp" firstAttribute="leading" secondItem="lwi-gy-4w6" secondAttribute="leading" id="Whz-PC-sTr"/>
+                                    <constraint firstAttribute="bottom" secondItem="VPy-tU-CvX" secondAttribute="bottom" id="XU9-Js-64f"/>
+                                    <constraint firstItem="VPy-tU-CvX" firstAttribute="top" secondItem="p2q-L5-SNp" secondAttribute="bottom" constant="8" symbolic="YES" id="bpb-PC-hIf"/>
+                                    <constraint firstItem="p2q-L5-SNp" firstAttribute="trailing" secondItem="VPy-tU-CvX" secondAttribute="trailing" id="haE-1D-VRU"/>
+                                    <constraint firstItem="p2q-L5-SNp" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="top" id="m1z-Xf-1to"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-sB-Rkd">
                                 <rect key="frame" x="20" y="684" width="374" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="DA4-tn-hrh"/>
+                                    <constraint firstAttribute="height" constant="98" id="8D2-0J-aad"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="추가">
@@ -844,23 +840,24 @@
                         <viewLayoutGuide key="safeArea" id="8aI-E8-m87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="REA-5V-X1a" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" id="14R-DK-bli"/>
-                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="72n-yH-sI6"/>
-                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="top" secondItem="REA-5V-X1a" secondAttribute="bottom" constant="8" symbolic="YES" id="9hQ-ER-9FR"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b5V-sB-Rkd" secondAttribute="bottom" constant="80" id="Fnh-SV-Lee"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="9XI-yY-YZ9" secondAttribute="trailing" constant="20" id="Jzk-JS-nKv"/>
-                            <constraint firstItem="lwi-gy-4w6" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="P13-s1-CXf"/>
-                            <constraint firstItem="REA-5V-X1a" firstAttribute="top" secondItem="8aI-E8-m87" secondAttribute="top" constant="50" id="SDW-ur-IfE"/>
-                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="bottom" constant="15" id="fbO-fc-KbO"/>
-                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="leading" secondItem="8aI-E8-m87" secondAttribute="leading" constant="20" id="nf2-gb-Fe9"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="b5V-sB-Rkd" secondAttribute="trailing" constant="20" id="sHW-QZ-4uN"/>
-                            <constraint firstItem="8aI-E8-m87" firstAttribute="trailing" secondItem="lwi-gy-4w6" secondAttribute="trailing" constant="20" id="smf-nV-uQF"/>
-                            <constraint firstItem="lwi-gy-4w6" firstAttribute="top" secondItem="9XI-yY-YZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="vNg-mq-7gh"/>
-                            <constraint firstItem="REA-5V-X1a" firstAttribute="trailing" secondItem="8aI-E8-m87" secondAttribute="trailing" id="z4S-1J-GQ9"/>
+                            <constraint firstItem="b5V-sB-Rkd" firstAttribute="top" secondItem="lwi-gy-4w6" secondAttribute="bottom" constant="15" id="8nu-cv-9ZF"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="top" secondItem="REA-5V-X1a" secondAttribute="bottom" constant="8" symbolic="YES" id="9ae-88-vpA"/>
+                            <constraint firstItem="8aI-E8-m87" firstAttribute="bottom" secondItem="b5V-sB-Rkd" secondAttribute="bottom" constant="80" id="Llo-rG-aR8"/>
+                            <constraint firstAttribute="trailing" secondItem="REA-5V-X1a" secondAttribute="trailing" id="T7M-Hf-iK5"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="trailing" secondItem="b5V-sB-Rkd" secondAttribute="trailing" id="VO2-ah-1uc"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="centerX" secondItem="9XI-yY-YZ9" secondAttribute="centerX" id="ZVb-C7-C0z"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="trailing" secondItem="lwi-gy-4w6" secondAttribute="trailing" id="c4N-LF-6R2"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="top" secondItem="8aI-E8-m87" secondAttribute="top" id="ceP-H7-Y8C"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="leading" secondItem="b5V-sB-Rkd" secondAttribute="leading" id="dPS-nr-JlL"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="QU5-nl-EE3" secondAttribute="leadingMargin" id="fa3-Rq-6kg"/>
+                            <constraint firstItem="REA-5V-X1a" firstAttribute="leading" secondItem="QU5-nl-EE3" secondAttribute="leading" id="hGi-zN-1hn"/>
+                            <constraint firstItem="lwi-gy-4w6" firstAttribute="top" secondItem="9XI-yY-YZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="uVd-N8-b6l"/>
+                            <constraint firstItem="9XI-yY-YZ9" firstAttribute="leading" secondItem="lwi-gy-4w6" secondAttribute="leading" id="uZo-PP-cbb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="추가하기" id="lJ8-mG-CUd"/>
                     <connections>
+                        <outlet property="healthClubImage" destination="REA-5V-X1a" id="UPR-Gb-yns"/>
                         <outlet property="healthClubLocation" destination="p2q-L5-SNp" id="8hg-sF-OY6"/>
                         <outlet property="healthClubPhoneNumber" destination="VPy-tU-CvX" id="1ZO-HC-khW"/>
                         <outlet property="healthClubTitle" destination="9XI-yY-YZ9" id="MLL-kZ-bih"/>

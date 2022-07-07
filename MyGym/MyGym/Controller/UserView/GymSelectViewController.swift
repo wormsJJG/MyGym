@@ -105,16 +105,7 @@ extension GymSelectViewController: UICollectionViewDelegate, UICollectionViewDat
                                     }
                                 }.resume()
                     }
-//                    if(healthClubList[indexPath.item].profileImageUrl != "nil"){
-//                    let url = URL(string: healthClubList[indexPath.item].profileImageUrl)
-//                    do{
-//                        let data = try Data(contentsOf: url!)
-//                        cell.gymImage.image = UIImage(data: data)
-//                    } catch{
-//
-//                    }
-//                }
-//                    cell.gymTitleLabel.text = healthClubList[indexPath.item].name
+                    cell.gymTitleLabel.text = healthClubList[indexPath.item].name
                 }
         return cell
     }
