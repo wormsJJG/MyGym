@@ -60,8 +60,11 @@ extension GymSelectViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = gymListCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! gymListCollectionViewCell
-        cell.backgroundColor = .red
+        cell.backgroundColor = .white
         cell.layer.cornerRadius = 12.0
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.gymImage.layer.cornerRadius = 12.0
         if searchCount > 0 {
                     if(filterData[indexPath.item].profileImageUrl != "nil"){
                         let url = filterData[indexPath.item].profileImageUrl

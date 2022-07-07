@@ -41,7 +41,10 @@ extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = healthClubView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyPageCollectionViewCell
         cell.healthClubTitle.text = userHealthClub.name
-        cell.backgroundColor = .red
+        cell.backgroundColor = .white
+        cell.layer.cornerRadius = 12.0
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.black.cgColor
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
