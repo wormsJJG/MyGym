@@ -131,7 +131,7 @@ extension GymSelectViewController: UISearchBarDelegate {
             filterData = healthClubList
         }
             for healthClub in healthClubList{
-                if healthClub.name.contains(searchText.uppercased()){
+                if healthClub.name.contains(searchText.lowercased()){
                     filterData.append(healthClub)
                 }
             }
